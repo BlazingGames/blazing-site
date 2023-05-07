@@ -1,0 +1,38 @@
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(139, 139, 139);
+}
+
+ul {
+    padding-left: 18px
+}
+
+#computer, #turtle {
+	float: left;
+	margin-right: 5px;
+}
+
+#monitor, #sword_turtle {
+	float: right;
+}
+
+.section {
+	color: white;
+	font-size: 125%;
+	margin: 5px;
+}
+
+.hrfixer {
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+.ct {
+	width: 125px;
+}
+
+.recipe {
+	width: 350px;
+}
