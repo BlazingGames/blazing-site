@@ -30,6 +30,15 @@ function onLoad() {
 		backButton.innerHTML = "<i class='fas fa-arrow-left'>";
 
 		document.body.appendChild(backButton);
+
+		let homeButton = document.createElement("a");
+		homeButton.classList.add("home");
+		homeButton.href = "../index.html";
+		homeButton.innerHTML = "<i class='fas fa-home'>";
+
+		document.body.appendChild(homeButton);
+
+		document.getElementById("siteheader").innerHTML = "<a href='../index.html'>BlazingSite</a>"
 	}
 
 	const items = document.querySelectorAll(".mcitem");
