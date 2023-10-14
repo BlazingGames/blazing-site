@@ -107,3 +107,8 @@ ul li {
 {
 	flex: 0 1 auto;
 }
+
+.sectionbutton > .desc.villagerdesc
+{
+	height: 75%;
+}
