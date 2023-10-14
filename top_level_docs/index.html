@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>BlazingSite</title>
+  		<link rel="icon" type="image/png" href="../resources/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+		<link rel="stylesheet" href="../style.css" />
+		<script src="../script.js"></script>
+		<script src="../docscript.js"></script>
+		<link rel="stylesheet" href="../docstyle.css" />
+	</head>
+	<body>
+		<div id="siteheader">BlazingSite</div>
+		<div id="navbar"></div>
+		<div id="content">
+			<div id="title">
+				The Top Level Documentation
+			</div>
+			<div id="description">
+				<div class="docdesc">
+					These functions are ran at the top level.
+					Deal with it.
+				</div>
+				<div class="section">
+					<div class="sectitle">Console Functions</div>
+					<div class="function">
+						<div class="funtitle">startup</div>
+						<div class="fundesc">Boots the computer, meant to be used in the console</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">startup: () => void;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">shutdown</div>
+						<div class="fundesc">Shuts down the computer and stops everything</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">shutdown: () => void;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">changePassword</div>
+						<div class="fundesc">Changes the password of the computer, will be hashed and salted</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">changePassword: (password: string) => void;</code></pre>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="sectitle">Miscellaneous Functions</div>
+					<div class="function">
+						<div class="funtitle">sleep</div>
+						<div class="fundesc">Pauses the execution for the specified amount of time</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">sleep: (time: number) => boolean;</code></pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

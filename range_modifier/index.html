@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>BlazingSite</title>
+  		<link rel="icon" type="image/png" href="../resources/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../style.css" />
+		<script src="../script.js"></script>
+		<link rel="stylesheet" href="../itemstyle.css" />
+	</head>
+	<body>
+		<div id="siteheader">BlazingSite</div>
+		<img src="../resources/blaze_rod.png" id="icon" />
+		<div id="content">
+			<div id="title">
+				Range Modifier
+			</div>
+			<div id="description">
+				<p>
+					You want these spawners to use more space? Or do you want the spawners to be activated from further away?<br />
+					You'll get that with this modifier.
+				</p>
+				<p>
+					Right Click a spawner with a <i class="mcitem blaze_rod"></i> to increase it's spawn range.<br />
+					Right Click a spawner with a <i class="mcitem prismarine_crystal"></i> to 
+					increase it's required player range.<br />
+					Right Click a spawner with a <i class="mcitem nether_star"></i> to 
+					increase it's required player range to the maximum of 32767, 
+					far past the <i class="mcitem prismarine_crystal"></i> limit.<br />
+				</p>
+				<p>
+					The reason the spawn range is capped at 32767 is because the range in the spawner's nbt is a short, which only
+					uses 2 bytes (16 bits) AND for some reason, the number is signed, which removes 1 bit that you can work with.
+				</p>
+			</div>
+		</div>
+		<div class="clearBoth"></div>
+	</body>
+</html>
