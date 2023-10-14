@@ -33,6 +33,16 @@ a {
 	text-decoration: none;
 }
 
+#siteheader a
+{
+	color: inherit;
+}
+
+#siteheader a:hover
+{
+	color: inherit;
+}
+
 #siteheader {
 	background-image: linear-gradient(to bottom right, red, yellow);
 	background-clip: text;
@@ -43,11 +53,9 @@ a {
 	margin: 0;
 }
 
-.back {
+.back, .home {
 	display: inline-flex;
 	position: fixed;
-	bottom: 20px;
-	right: 20px;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -60,7 +68,19 @@ a {
 	border: none;
 }
 
-.back i {
+.back
+{
+	bottom: 20px;
+	right: 20px;
+}
+
+.home
+{
+	bottom: 20px;
+	left: 20px;
+}
+
+.back i, .home i {
 	vertical-align: middle;
 	color: white;
 	font-size: 35px;
