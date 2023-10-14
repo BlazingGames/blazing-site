@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-	<head></head>
+	<head>
+		<title>BlazingSite</title>
+  		<link rel="icon" type="image/png" href="../resources/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../style.css" />
+		<link rel="stylesheet" href="../indexstyle.css" />
+		<link rel="stylesheet" href="../sectionstyle.css" />
+		<script src="../script.js"></script>
+	</head>
 	<body>
-		<p id="siteheader">Custom Mechanics</p>
-		<img src="./resources/xpbottle.gif" class="img" />
-		<p class="section">
-			<b>Craftable XP Bottles</b>, Partly because of the
-			<a href="#enchants">custom enchants</a> and partly because it's just useful
-			we added craftable xp bottles. To "craft" the xp bottles you click an empty
-			bottle while you have levels, it drains 1 of your levels to get you an xp
-			bottle.
-		</p>
-		<div class="hrfixer"></div>
-		<hr />
-		<img src="./resources/spawner.png" class="img" />
-		<p class="section">
-			<b>Silk Touch Spawners</b>, Something that should be in vanilla anyways we added it. With the silk touch enchantment on a pickaxe of iron quality or higher you can break spawners and get them in your inventory, all the metadata stays so if you <a href="apotheosis">modified it</a> previously you don't need to again.
-		</p>
-		<div class="hrfixer"></div>
-		<hr />
-		<img src="./resources/slavery.png" class="img" />
-		<p class="section">
-			<b>Leadable Villagers</b>, Moving villagers can be a pain, so we made them leadable just shift rclick a villager with a lead in your hand and you have your very own <s>slave</s> pet villager.
-		</p>
-		<div class="hrfixer"></div>
-		<hr />
+		<div id="siteheader">BlazingSite</div>
+		<div id="content">
+			<div id="title">
+				Custom Mechanics
+			</div>
+			<div id="sectiondescription">
+				There are a lot of miscellanous things coded into the plugin. Here's a list 
+			</div>
+			<div id="sections">
+				<div id="sectionbuttons">
+					<div>
+						<div id="silk_touch_spawners" class="sectionbutton">
+							<div class="title">Silk Touch Spawners</div>
+							<img class="desc" src="../resources/spawner.png" 
+							alt="A monster spawner with flame particles around it." />
+						</div>
+						<div id="craftable_experience_bottles" class="sectionbutton">
+							<div class="title">Craftable Experience Bottle</div>
+							<img class="desc" src="../resources/altar.png" 
+							alt="An experience bottle." />
+						</div>
+						<div id="leadable_villagers" class="sectionbutton">
+							<div class="title">Leadable Villagers</div>
+							<img class="desc" src="../resources/slavery.png" 
+							alt="A villager tied to a fence post with a lead." />
+						</div>
+						<div id="infinite_fireworks" class="sectionbutton">
+							<div class="title">Infinite Fireworks</div>
+							<img class="desc" src="../resources/infinite_firework_rocket.gif" 
+							alt="An enchanted firework rocket." />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

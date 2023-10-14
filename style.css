@@ -1,3 +1,15 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+:root
+{
+	--recipe_multiplier: 0.65;
+}
+
+*
+{
+	tab-size: 4;
+}
+
 html {
 	min-height: 100%;
 	min-width: 100%;
@@ -9,7 +21,6 @@ html {
 }
 
 ul {
-	color: whitesmoke;
 	font-size: 125%;
 	margin-top: 0px;
 	margin-left: 0px;
@@ -52,6 +63,178 @@ a {
 .back i {
 	vertical-align: middle;
 	color: white;
-	transform: scaleX(-1) rotate(-45deg);
 	font-size: 35px;
+}
+
+.mcitem
+{
+	display: inline;
+	width: 1em;
+	height: 1em;
+}
+
+.mcitem > img
+{
+	transform: translate(0, 5px);
+	width: inherit;
+	height: inherit;
+}
+
+.recipe .mcitem > img
+{
+	transform: none;
+}
+
+.recipe .mcitem
+{
+	display: block;
+	width: 40px;
+	height: 40px;
+}
+
+.tooltip 
+{
+	position: relative;
+}
+
+.redhighlight
+{
+	color: red;
+	text-shadow: 0 0 10px red, 0 0 10px red, 0 0 10px red, 0 0 10px red, 0 0 10px red;
+}
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: auto;
+	white-space: nowrap;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: -40px;
+	left: 50%;
+	font-size: 18px;
+	font-style: normal;
+	transform: translate(-50%, 0);
+	outline-style: solid;
+	outline-offset: -6px;
+	outline-color: #25025C;
+	padding: 10px;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+.recipegallery
+{
+	position: relative;
+	width: calc(520px * var(--recipe_multiplier));
+	height: calc(272px * var(--recipe_multiplier) + 24px);
+}
+
+.recipegallery .galleryControllers
+{
+	position: absolute;
+	top: calc(272px * var(--recipe_multiplier));
+	width: calc(520px * var(--recipe_multiplier));
+	text-align: center;
+	user-select: none;
+}
+
+.recipegallery .galleryControllers .left
+{
+	cursor: pointer;
+	float: left;
+	width: 10%;
+}
+
+.recipegallery .galleryControllers .middle
+{
+	float: left;
+	width: 80%;
+}
+
+.recipegallery .galleryControllers .right
+{
+	cursor: pointer;
+	float: left;
+	width: 10%;
+}
+
+.recipegallery .recipe
+{
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: none;
+}
+
+.recipegallery .recipe.gallerySelected
+{
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.recipe
+{
+	width: calc(520px * var(--recipe_multiplier));
+	height: calc(272px * var(--recipe_multiplier));
+	background-image: url('resources/crafting_gui.png');
+	background-size: contain;
+	position: relative;
+}
+
+.recipe .mcitem
+{
+	position: absolute;
+	width: calc(64px * var(--recipe_multiplier));
+	height: calc(64px * var(--recipe_multiplier));
+}
+
+.recipe .mcitem:nth-child(3n+1 of .mcitem)
+{
+	left: calc(32px * var(--recipe_multiplier));
+}
+
+.recipe .mcitem:nth-child(3n+2 of .mcitem)
+{
+	left: calc(104px * var(--recipe_multiplier));
+}
+
+.recipe .mcitem:nth-child(3n of .mcitem)
+{
+	left: calc(176px * var(--recipe_multiplier));
+}
+
+.recipe .mcitem:nth-child(-n+3 of .mcitem)
+{
+	top: calc(32px * var(--recipe_multiplier));
+}
+
+.recipe .mcitem:nth-child(-n+6):nth-child(n+4)
+{
+	top: calc(104px * var(--recipe_multiplier));
+}
+
+.recipe .mcitem:nth-child(-n+9):nth-child(n+7)
+{
+	top: calc(176px * var(--recipe_multiplier));
+}
+
+.recipe .mcitem:nth-child(10 of .mcitem)
+{
+	top: calc(104px * var(--recipe_multiplier));
+	left: calc(408px * var(--recipe_multiplier));
+}
+
+.clearBoth
+{
+    clear: both;
 }

@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-	<head></head>
+	<head>
+		<title>BlazingSite</title>
+  		<link rel="icon" type="image/png" href="../resources/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../style.css" />
+		<link rel="stylesheet" href="../indexstyle.css" />
+		<link rel="stylesheet" href="../sectionstyle.css" />
+		<script src="../script.js"></script>
+	</head>
 	<body>
-		<p id="siteheader">Apotheosis</p>
-		<img src="./resources/spawner.png" id="spawner" />
-		<p class="section">
-			<b>Modifying Spawners</b>, You modify spawners by holding one of the listed
-			items in your hand and rightclicking the spawner with them, we also added
-			support for placing mob spawn eggs inside spawners which is useful for the
-			<a href="#enchantments">capturing enchantment</a>.
-		</p>
-		<div class="hrfixer"></div>
-		<hr />
-		<p class="section">
-			<b>Modifier Items</b>
-		</p>
-		<ul>
-			<li style="background-image: url('./resources/sugar.png');">Sugar, Decrease min spawner delay.</li>
-			<li style="background-image: url('./resources/clock.png');">Clock, Decrease max spawner delay.</li>
-			<li style="background-image: url('./resources/fermented_spider_eye.png');">Fermented Spider Eye, Increase spawn count.</li>
-			<li style="background-image: url('./resources/ghast_tear.png');">Ghast Tear, Increase max nearby entities.</li>
-			<li style="background-image: url('./resources/prismarine_crystal.png');">Prismarine Crystal, Increase required player range.</li>
-			<li style="background-image: url('./resources/blaze_rod.png');">Blaze Rod, Decrease spawn range.</li>
-			<li style="background-image: url('./resources/nether_star.gif');">Nether Star, Ignore nearby player requirement. (sets range to 32K)</li>
-			<li style="background-image: url('./resources/quartz.png');">Quartz, If held in your offhand inverts the effects of other items.</li>
-		</ul>
+		<div id="siteheader">BlazingSite</div>
+		<div id="content">
+			<div id="title">
+				Apotheosis
+			</div>
+			<div id="sectiondescription">
+				With this plugin, you can modify spawners! You can get spawners using <a href="../silk_touch_spawners">silk touch</a>.
+				You can look at a spawner to see it's stats. There's no limit on spawner modifications.
+			</div>
+			<div id="sections">
+				<div id="sectionbuttons">
+					<div>
+						<div id="speed_modifier" class="sectionbutton">
+							<div class="title">Speed Modifier</div>
+							<img class="desc" src="../resources/clock.png" 
+							alt="A clock." />
+						</div>
+						<div id="mob_modifier" class="sectionbutton">
+							<div class="title">Mob Modifier</div>
+							<img class="desc" src="../resources/npc_spawn_egg.png" 
+							alt="An NPC Spawn Egg (Education Edition)." />
+						</div>
+						<div id="range_modifier" class="sectionbutton">
+							<div class="title">Range Modifier</div>
+							<img class="desc" src="../resources/blaze_rod.png" 
+							alt="A blaze rod." />
+						</div>
+					</div>
+					<div>
+						<div id="count_modifier" class="sectionbutton">
+							<div class="title">Count Modifier</div>
+							<img class="desc" src="../resources/ghast_tear.png" 
+							alt="A ghast tear." />
+						</div>
+						<div id="inverse_modifier" class="sectionbutton">
+							<div class="title">Inverse Modifier</div>
+							<img class="desc illagerdesc" src="../resources/quartz.png" 
+							alt="A piece of quartz." />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>BlazingSite</title>
+  		<link rel="icon" type="image/png" href="../resources/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+		<link rel="stylesheet" href="../style.css" />
+		<script src="../script.js"></script>
+		<script src="../docscript.js"></script>
+		<link rel="stylesheet" href="../docstyle.css" />
+	</head>
+	<body>
+		<div id="siteheader">BlazingSite</div>
+		<div id="navbar"></div>
+		<div id="content">
+			<div id="title">
+				The Monitor Object Documentation
+			</div>
+			<div id="description">
+				<div class="docdesc">
+					This page only applies to 
+					<a href="../monitor">monitors</a>.
+				</div>
+				<div class="section">
+					<div class="sectitle">Drawing Functions</div>
+					<div class="function">
+						<div class="funtitle">setPixel</div>
+						<div class="fundesc">Set the rgb value of a pixel at the specified xy, true for success, false for errors</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">setPixel: (x: number, y: number, rgb: number) => boolean;</code></pre>
+						</div>
+					</div><div class="function">
+						<div class="funtitle">getPixel</div>
+						<div class="fundesc">Get the rgb value of a pixel at the specified xy, or -1 for errors</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">getPixel: (x: number, y: number) => number;</code></pre>
+						</div>
+					</div><div class="function">
+						<div class="funtitle">fillRect</div>
+						<div class="fundesc">Fill an area with a specified rgb color</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">fillRect: (x: number, y: number, width: number,
+		   height: number, rgb: number) => boolean;</code></pre>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="sectitle">Interaction Functions</div>
+					<div class="function">
+						<div class="funtitle">setClickHandler</div>
+						<div class="fundesc">Sets the handler for detecting clicks</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">setClickHandler: (handler: (x: number, y: number) => void)
+		         => void;</code></pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

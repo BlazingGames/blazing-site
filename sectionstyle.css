@@ -1,0 +1,9 @@
+.sectionbutton {
+	width: 180px;
+	height: 180px;
+}
+
+.sectionbutton > .desc.illagerdesc
+{
+	width: 65%;
+}

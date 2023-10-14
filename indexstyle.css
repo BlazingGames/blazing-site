@@ -1,0 +1,109 @@
+ul {
+    transition: font-size 0.3s ease-in-out;
+}
+
+ul li {
+    transition: font-size 0.3s ease-in-out;
+}
+
+.sectionbutton {
+	position: relative;
+	display: inline-block;
+	width: 250px;
+	height: 250px;
+	background-color: rgb(117, 117, 117);
+	border-color: rgb(58, 58, 58);
+	border-style: solid;
+	margin: 5px;
+	vertical-align: top;
+    transition: all 0.3s ease-in-out;
+}
+
+.sectionbutton:hover {
+	background-color: #333333;
+    color: #333333;
+    border-color: rgb(32, 32, 32);
+	cursor: pointer;
+}
+
+.sectionbutton:hover > .title, .sectionbutton:hover > .desc, .sectionbutton:hover > ul {
+    color: rgb(207, 207, 207);
+	cursor: cursor;
+}
+
+.sectionbutton > .title {
+    transition: font-size 0.3s ease-in-out;
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	position: absolute;
+	width: 100%;
+	top: 5px;
+	text-align: center;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sectionbutton > .desc {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 85%;
+	height: 85%;
+    transition: font-size 0.3s ease-in-out;
+	color: whitesmoke;
+	font-size: 16px;
+	text-align: left;
+}
+
+#content
+{
+    position: absolute;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    top: 50%;
+    left: 50%;
+    height: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+    transform: translate(-50%, -50%);
+
+	text-align: center;
+
+    color: white;
+
+    width: 75%;
+}
+
+#sectionbuttons
+{
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	transform: translate(0, -50%);
+}
+
+#sections
+{
+	position: relative;
+	flex: 1 1 auto;
+}
+
+#content 
+{
+	display: flex;
+	flex-flow: column;
+}
+#title 
+{
+	flex: 0 1 auto;
+	text-align: center;
+    font-size: 45px;
+}
+#sectiondescription 
+{
+	flex: 0 1 auto;
+}

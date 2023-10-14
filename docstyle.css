@@ -1,0 +1,153 @@
+ul {
+    padding-left: 18px
+}
+
+#navbar ul
+{
+	font-size: 100%;
+	margin-top: 0px;
+	margin-left: 0px;
+	text-align: left;
+	list-style-type: "- ";
+}
+
+#navbar ol
+{
+    font-size: 100%;
+	margin-top: 0px;
+	margin-left: 0px;
+    padding-left: 25px;
+	text-align: left;
+}
+
+.function
+{
+    position: relative;
+}
+
+.funtitle
+{
+    font-size: 35px;
+}
+
+.syntax pre
+{
+    margin-top: 5px;
+}
+
+.funicons
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.funicons i img
+{
+    width: 35px;
+    height: 35px;
+}
+
+.hljs
+{
+    background-color: #3F3F3F;
+    border-radius: 10px;
+}
+
+#content
+{
+    position: absolute;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    top: 50%;
+    right: 10%;
+    height: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+    transform: translate(0, -50%);
+
+    overflow-y: auto;
+
+    color: white;
+
+    width: 60%;
+}
+
+#navbar
+{
+    position: absolute;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    top: 50%;
+    left: 10%;
+    height: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    transform: translate(0, -50%);
+
+    overflow-y: auto;
+
+    color: white;
+
+    width: 15%;
+}
+
+#navbartitle
+{
+    font-size: 25px;
+}
+
+#navbar a
+{
+    color: white;
+}
+
+#navbar a:hover
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#description
+{
+    margin-top: 5px;
+}
+
+#title
+{
+    text-align: center;
+    font-size: 45px;
+}
+
+.recipe
+{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.sectitle
+{
+    margin-top: 25px;
+    font-size: 40px;
+}
+
+.section
+{
+    border-bottom: 4px #3F3F3F solid;
+}
+
+.section:last-child
+{
+    border-bottom: none;
+}
+
+pre
+{
+    width: 100%;
+}

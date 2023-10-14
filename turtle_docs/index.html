@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>BlazingSite</title>
+  		<link rel="icon" type="image/png" href="../resources/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+		<link rel="stylesheet" href="../style.css" />
+		<script src="../script.js"></script>
+		<script src="../docscript.js"></script>
+		<link rel="stylesheet" href="../docstyle.css" />
+	</head>
+	<body>
+		<div id="siteheader">BlazingSite</div>
+		<div id="navbar"></div>
+		<div id="content">
+			<div id="title">
+				The Turtle Object Documentation
+			</div>
+			<div id="description">
+				<div class="docdesc">
+					This page only applies to 
+					<a href="../turtle">turtles</a> and <a href="../sword_turtle">sword turtles</a>.
+				</div>
+				<div class="section">
+					<div class="sectitle">General Functions</div>
+					<div class="function">
+						<div class="funtitle">isReady</div>
+						<div class="fundesc">Checks if the turtle is ready for the next action</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">isReady: () => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">waitTime</div>
+						<div class="fundesc">Returns the time to wait until the next action can be performed</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">waitTime: () => number;</code></pre>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="sectitle">Movement Functions</div>
+					<div class="function">
+						<div class="funtitle">forward</div>
+						<div class="fundesc">Move the turtle forward</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">forward: () => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">backward</div>
+						<div class="fundesc">Move the turtle backward</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">backward: () => boolean;</code></pre>
+						</div>
+					</div>
+					
+					<div class="function">
+						<div class="funtitle">up</div>
+						<div class="fundesc">Moves the turtle up</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">up: () => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">down</div>
+						<div class="fundesc">Moves the turtle down</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">down: () => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">left</div>
+						<div class="fundesc">Makes the turtle rotate left</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">left: () => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">right</div>
+						<div class="fundesc">Makes the turtle rotate right</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">right: () => boolean;</code></pre>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="sectitle">Block Manipulation Functions</div>
+					<div class="function">
+						<div class="funtitle">destroy</div>
+						<div class="funicons"><i class="normalTurtleOnly"></i></div>
+						<div class="fundesc">Destroys the block in front of the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">destroy: () => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">destroyAbove</div>
+						<div class="funicons"><i class="normalTurtleOnly"></i></div>
+						<div class="fundesc">Destroys the block above the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">destroyAbove: () => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">destroyBelow</div>
+						<div class="funicons"><i class="normalTurtleOnly"></i></div>
+						<div class="fundesc">Destroys the block below the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">destroyBelow: () => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">place</div>
+						<div class="fundesc">Place a block in front of the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">place: (slot: number) => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">placeAbove</div>
+						<div class="fundesc">Place a block above the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">placeAbove: (slot: number) => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">placeBelow</div>
+						<div class="fundesc">Place a block below the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">placeBelow: (slot: number) => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">look</div>
+						<div class="fundesc">Gets the block type in front of the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">look: () => string;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">lookUp</div>
+						<div class="fundesc">Gets the block type above the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">lookUp: () => string;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">lookDown</div>
+						<div class="fundesc">Gets the block type below the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">lookDown: () => string;</code></pre>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="sectitle">Attacking Functions</div>
+					<div class="function">
+						<div class="funtitle">attack</div>
+						<div class="funicons"><i class="swordTurtleOnly"></i></div>
+						<div class="fundesc">Attacks in the direction the turtle is facing</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">attack: () => boolean;</code></pre>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="sectitle">Inventory Manipulation Functions</div>
+					<div class="function">
+						<div class="funtitle">dropAll</div>
+						<div class="fundesc">Drops the entire turtle inventory</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">dropAll: () => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">getInventory</div>
+						<div class="fundesc">Gets the inventory contents of the slot</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">getInventory: (slot: number) => {
+	"type": string,
+	"count": string,
+	"nbt": string
+};</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">take</div>
+						<div class="fundesc">Take an item from the container in front of the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">take: (slot: number, amount: number) => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">takeBelow</div>
+						<div class="fundesc">Take an item from the container below the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">takeBelow: (slot: number, amount: number) => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">takeAbove</div>
+						<div class="fundesc">Take an item from the container above the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">takeAbove: (slot: number, amount: number) => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">put</div>
+						<div class="fundesc">Put an item in the container in front of the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">put: (slot: number, amount: number) => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">putBelow</div>
+						<div class="fundesc">Put an item in the container below the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">putBelow: (slot: number, amount: number) => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">putAbove</div>
+						<div class="fundesc">Put an item in the container above the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">putAbove: (slot: number, amount: number) => boolean;</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">getContainer</div>
+						<div class="fundesc">Gets the contents of the slot of the container in front of the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">getContainer: (slot: number) => {
+	"type": string,
+	"count": string,
+	"nbt": string
+};</code></pre>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">swapContainerSlots</div>
+						<div class="fundesc">Swaps two slots in the container in front of the turtle</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">swapContainerSlots: (slotA: number, slotB: number) => boolean;</code></pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
