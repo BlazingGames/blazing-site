@@ -2,7 +2,8 @@ let itemGIFs = [
 	'nether_star', 'speed_upgrade', 'netherite_upgrade', 'luck_upgrade_tier_1', 'luck_upgrade_tier_2', 'luck_upgrade_tier_3',
 	'storage_upgrade_tier_1', 'storage_upgrade_tier_2', 'storage_upgrade_tier_3', 'storage_upgrade_tier_4', 'storage_upgrade_tier_5',
 	'pattern_upgrade_1x2', 'pattern_upgrade_2x2', 'pattern_upgrade_3x3', 'experience_bottle', 'enchanting_table',
-	'silk_touch_upgrade', 'flame_upgrade', 'chunkloader_upgrade'
+	'silk_touch_upgrade', 'flame_upgrade', 'chunkloader_upgrade', 'sweeping_upgrade_tier_1', 'sweeping_upgrade_tier_2', 
+	'sweeping_upgrade_tier_3'
 ];
 
 function onLoad() {
