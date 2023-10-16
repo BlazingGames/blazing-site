@@ -117,8 +117,13 @@ function loadMcItem(element)
 	element.addEventListener("mouseover", () => {
 		let boundingRect = tooltip.getBoundingClientRect();
 
-		if(boundingRect.left < 0) tooltip.style.transform = "translate(-50%, 0) translate(" + (-boundingRect.left) + "px, 0)";
-		if(boundingRect.right > window.innerWidth) tooltip.style.transform = "translate(-50%, 0) translate(" + (window.innerWidth-boundingRect.right) + "px, 0)";
+		let contentRect = document.body.getBoundingClientRect();
+
+		let left = (boundingRect.left - contentRect.left);
+		let right = (boundingRect.right - contentRect.left);
+
+		if(left < 0) tooltip.style.transform = "translate(-50%, 0) translate(" + (-left) + "px, 0)";
+		if(right > contentRect.width) tooltip.style.transform = "translate(-50%, 0) translate(" + (contentRect.width-right) + "px, 0)";
 	});
 
 	element.appendChild(img);

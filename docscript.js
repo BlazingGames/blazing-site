@@ -69,16 +69,27 @@ function loadDocIcon(element)
 	
 	console.log(element.classList);
 
+	let tooltipText = "";
+
 	if(element.classList.contains("normalTurtleOnly"))
 	{
 		img.src = "../resources/turtle.png";
+		tooltipText = "Turtles Only";
 	}
 	else if(element.classList.contains("swordTurtleOnly"))
 	{
 		img.src = "../resources/sword_turtle.png";
+		tooltipText = "Sword Turtles Only";
 	}
 
+	element.classList.add("tooltip");
+
+	let tooltip = document.createElement('span');
+	tooltip.classList.add('tooltiptext');
+	tooltip.innerHTML = tooltipText;
+
 	element.appendChild(img);
+	element.appendChild(tooltip);
 }
 
 function toCamelCase(text)

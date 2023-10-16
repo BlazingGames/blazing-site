@@ -145,7 +145,7 @@ a {
 	padding: 10px;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext, .tooltip .tooltiptext:hover {
 	visibility: visible;
 }
 
