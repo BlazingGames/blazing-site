@@ -23,7 +23,8 @@
 				<div class="docdesc">
 					This page only applies to 
 					<a href="../turtle">turtles</a> and <a href="../sword_turtle">sword turtles</a>.<br/>
-					These functions are available in the turtle object.
+					These functions are available in the turtle object.<br/>
+					If a function argument has a ? in the usage, then that argument is optional.
 				</div>
 				<div class="section">
 					<div class="sectitle">General Functions</div>
@@ -188,7 +189,7 @@
 						<div class="funtitle">drop</div>
 						<div class="fundesc">Drop a specific slot and a specific amount</div>
 						<div class="syntax">
-							<pre><code class="language-typescript">drop: (slot: number[, amount: number]) => boolean;</code></pre>
+							<pre><code class="language-typescript">drop: (slot: number, amount?: number) => boolean;</code></pre>
 						</div>
 					</div>
 					<div class="function">
