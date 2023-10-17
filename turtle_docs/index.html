@@ -45,6 +45,17 @@
 				<div class="section">
 					<div class="sectitle">Movement Functions</div>
 					<div class="function">
+						<div class="funtitle">getDirection</div>
+						<div class="fundesc">
+							Get the direction the turtle is facing<br />
+							Returns a uppercase string with the name
+							of the cardinal direction.
+						</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">getDirection: () => string;</code></pre>
+						</div>
+					</div>
+					<div class="function">
 						<div class="funtitle">forward</div>
 						<div class="fundesc">Move the turtle forward</div>
 						<div class="syntax">
@@ -173,6 +184,13 @@
 				</div>
 				<div class="section">
 					<div class="sectitle">Inventory Manipulation Functions</div>
+					<div class="function">
+						<div class="funtitle">drop</div>
+						<div class="fundesc">Drop a specific slot and a specific amount</div>
+						<div class="syntax">
+							<pre><code class="language-typescript">drop: (slot: number[, amount: number]) => boolean;</code></pre>
+						</div>
+					</div>
 					<div class="function">
 						<div class="funtitle">dropAll</div>
 						<div class="fundesc">Drops the entire turtle inventory</div>
