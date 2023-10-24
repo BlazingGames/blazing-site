@@ -48,6 +48,30 @@ function onLoad() {
 		loadMcItem(element);
 	}
 
+	const shapelessIcons = document.querySelectorAll(".recipe .shapeless");
+
+	for (const element of shapelessIcons) {
+		element.classList.add("tooltip");
+
+		let tooltip = document.createElement('span');
+		tooltip.classList.add('tooltiptext');
+		tooltip.innerHTML = "Shapeless Recipe";
+
+		element.addEventListener("mouseover", () => {
+			let boundingRect = tooltip.getBoundingClientRect();
+
+			let contentRect = document.body.getBoundingClientRect();
+
+			let left = (boundingRect.left - contentRect.left);
+			let right = (boundingRect.right - contentRect.left);
+
+			if(left < 0) tooltip.style.transform = "translate(-50%, 0) translate(" + (-left) + "px, 0)";
+			if(right > contentRect.width) tooltip.style.transform = "translate(-50%, 0) translate(" + (contentRect.width-right) + "px, 0)";
+		});
+
+		element.appendChild(tooltip);
+	}
+
 	const galleries = document.querySelectorAll(".recipegallery");
 
 	for (const element of galleries) {

@@ -253,6 +253,18 @@ a {
 	left: calc(408px * var(--recipe_multiplier));
 }
 
+.recipe .shapeless
+{
+	position: absolute;
+	top: calc(30px * var(--recipe_multiplier));
+	left: calc(441px * var(--recipe_multiplier));;
+	width: calc(19px * 3 * var(--recipe_multiplier));
+	height: calc(15px * 3 * var(--recipe_multiplier));
+	transform: translate(-50%, 0);
+	background-size: contain;
+	background-image: url("resources/shapeless_crafting_icon.png");
+}
+
 .clearBoth
 {
     clear: both;
