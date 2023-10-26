@@ -82,3 +82,8 @@ ul {
 	float: left;
 	margin-right: 5px;
 }
+
+.scrollbar
+{
+    overflow-y: auto;
+}

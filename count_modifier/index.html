@@ -12,7 +12,7 @@
 	<body>
 		<div id="siteheader">BlazingSite</div>
 		<img src="../resources/ghast_tear.png" id="icon" />
-		<div id="content">
+		<div id="content" class="scrollbar">
 			<div id="title">
 				Count Modifier
 			</div>
@@ -22,14 +22,21 @@
 				</p>
 				<p>
 					Right Click a spawner with a <i class="mcitem fermented_spider_eye"></i> to 
-					increase it's maximum spawn count. Range: 1-20<br />
-					Right Click a spawner with a <i class="mcitem ghast_tear"></i> to increase how many mobs of the same type 
-					as the spawner's can be nearby before the spawner stops spawning more mobs. Range: 1-200
+					increase it's maximum spawn count by 1. Range: 1-20<br />
+					Right Click a spawner with a <i class="mcitem ghast_tear"></i> to increase it's maximum amount of nearby mobs by 2.
+					Range: 1-200<br />
+					Right Click a spawner with a <i class="mcitem chorus_fruit"></i> to 
+					increase it's maximum amount of nearby mobs to the maximum of 32767, 
+					far past the <i class="mcitem ghast_tear"></i> limit.<br />
 				</p>
 				<p>
 					Spawn Count will usually be A LOT less than the maximum. This is due to the fact that
 					spawn attempts may fail and the spawn count is also 
 					capped by the maximum amount of nearby mobs of the same type.
+				</p>
+				<p>
+					The reason the maximum amount of nearby mobs is capped at 32767 is because the amount in the spawner's nbt is a short, which only
+					uses 2 bytes (16 bits) AND for some reason, the number is signed, which removes 1 bit that you can work with.
 				</p>
 			</div>
 		</div>
