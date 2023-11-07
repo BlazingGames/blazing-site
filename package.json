@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "git-scripts": "^0.6.4",
+    "surge": "latest"
+  },
+  "git": {
+    "scripts": {
+      "pre-push": "surge --project ./ --domain blazingsite.surge.sh"
+    }
+  }
+}
