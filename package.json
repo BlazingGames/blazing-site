@@ -5,7 +5,7 @@
   },
   "git": {
     "scripts": {
-      "pre-push": "surge --project ./ --domain blazingsite.surge.sh"
+      "pre-push": "surge.cmd --project ./ --domain blazingsite.surge.sh"
     }
   }
 }
