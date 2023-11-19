@@ -3,8 +3,12 @@ let itemGIFs = [
 	'storage_upgrade_tier_1', 'storage_upgrade_tier_2', 'storage_upgrade_tier_3', 'storage_upgrade_tier_4', 'storage_upgrade_tier_5',
 	'pattern_upgrade_1x2', 'pattern_upgrade_2x2', 'pattern_upgrade_3x3', 'experience_bottle', 'enchanting_table',
 	'silk_touch_upgrade', 'flame_upgrade', 'chunkloader_upgrade', 'sweeping_upgrade_tier_1', 'sweeping_upgrade_tier_2', 
-	'sweeping_upgrade_tier_3', 'compass', 'teleport_anchor'
+	'sweeping_upgrade_tier_3', 'compass', 'teleport_anchor', 'builder_wand'
 ];
+
+let altTranslations = {
+	"builder_wand": "Builder's Wand"
+};
 
 function onLoad() {
 	const sections = document.getElementsByClassName("sectionbutton");
@@ -104,26 +108,32 @@ function loadMcItem(element)
 	element.classList.add("tooltip");
 
 	let imageAlt = itemId;
-	while(imageAlt.includes("_"))
-	{
-		imageAlt = imageAlt.replace("_", " ");
+	if(itemId in altTranslations) {
+		imageAlt = altTranslations[itemId];
 	}
-	imageAlt = toTitleCase(imageAlt);
-
-	let split = imageAlt.split(" ");
-
-	for (let i = 0; i < split.length; i++) {
-		let element = split[i];
-		
-		if(element.match(/^[1-9][0-9]*$/))
+	else {
+		while(imageAlt.includes("_"))
 		{
-			element = romanize(parseInt(element));
+			imageAlt = imageAlt.replace("_", " ");
+		}
+		imageAlt = toTitleCase(imageAlt);
+
+		let split = imageAlt.split(" ");
+
+		for (let i = 0; i < split.length; i++) {
+			let element = split[i];
+			
+			if(element.match(/^[1-9][0-9]*$/))
+			{
+				element = romanize(parseInt(element));
+			}
+
+			split[i] = element;
 		}
 
-		split[i] = element;
+		imageAlt = split.join(" ");
 	}
-
-	imageAlt = split.join(" ");
+	
 
 	if(overrideTooltip.length > 0)
 	{
