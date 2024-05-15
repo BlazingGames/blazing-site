@@ -301,3 +301,13 @@ p.hidden
 {
 	display: none;
 }
+
+.equation
+{
+	background-color: rgba(0,0,0,0.1);
+}
+
+.equation:hover
+{
+	background-color: rgba(0,0,0,0.4);
+}

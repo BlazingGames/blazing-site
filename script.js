@@ -52,6 +52,12 @@ function onLoad() {
 		loadMcItem(element);
 	}
 
+	const altarAvailability = document.querySelectorAll(".altarAvailability");
+
+	for (const element of altarAvailability) {
+		loadAltarAvailability(element);
+	}
+
 	const shapelessIcons = document.querySelectorAll(".recipe .shapeless");
 
 	for (const element of shapelessIcons) {
@@ -276,6 +282,83 @@ function romanize (num) {
     while (i--)
         roman = (key[+digits.pop() + (i * 10)] || "") + roman;
     return Array(+digits.join("") + 1).join("M") + roman;
+}
+
+function loadAltarAvailability(element)
+{
+	let availability = element.innerHTML.split(",");
+	element.innerHTML = "";
+
+	let table = document.createElement("table");
+	let altarTierRow = document.createElement("tr");
+	altarTierRow.classList.add("altarTier");
+	let altarTierD = document.createElement("td");
+	altarTierD.innerHTML = "<a href='../altar_of_enchanting'>Altar Tier</a>";
+	altarTierRow.appendChild(altarTierD);
+	let maxLevelRow = document.createElement("tr");
+	maxLevelRow.classList.add("maxLevel");
+	let maxLevelD = document.createElement("td");
+	maxLevelD.innerHTML = "Max. Available Level";
+	maxLevelRow.appendChild(maxLevelD);
+
+	let string = null;
+	let amount = 0;
+
+	let tier = 0;
+	for (const level of availability)
+	{
+		tier++;
+		let current = "";
+		if(isNaN(+level))
+		{
+			current = level;
+		}
+		else if(+level > 0)
+		{
+			current = romanize(+level);
+		}
+
+		if(string == null) string = current;
+
+		if(current == string) 
+		{
+			amount++;
+		}
+		else 
+		{
+			maxLevelRow.appendChild(getAltarLevelElement(string, amount));
+			string = current;
+			amount = 1;
+		}
+
+		let altarTierEl = document.createElement("td");
+		altarTierEl.innerHTML = romanize(tier);
+
+		altarTierRow.appendChild(altarTierEl);
+	}
+	let maxLevelEl = getAltarLevelElement(string, amount);
+
+	if(amount >= availability.length && string == "")
+	{
+		maxLevelEl.innerHTML = "Treasure";
+	}
+
+	maxLevelRow.appendChild(maxLevelEl);
+
+	table.appendChild(altarTierRow);
+	table.appendChild(maxLevelRow);
+	element.appendChild(table);
+}
+
+function getAltarLevelElement(string, amount)
+{
+	let maxLevelEl = document.createElement("td");
+
+	maxLevelEl.classList.add(string == "" ? "notavailable" : "available");
+	maxLevelEl.colSpan = amount;
+	maxLevelEl.innerHTML = string;
+
+	return maxLevelEl;
 }
 
 addEventListener("load", onLoad);
