@@ -55,6 +55,7 @@ ul li {
 	color: whitesmoke;
 	font-size: 16px;
 	text-align: left;
+	user-select: none;
 }
 
 #content
