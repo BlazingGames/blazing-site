@@ -18,10 +18,10 @@ function onLoad() {
 		element.addEventListener("click", function (event) {
 			let target = event.currentTarget;
 			console.log(target.id);
-			let page = "../" + target.id;
+			let page = "../" + target.id + "/index.html";
 			if(document.body.classList.contains("homepage"))
 			{
-				page = "./" + target.id;
+				page = "./" + target.id + "/index.html";
 			}
 			window.location.assign(page);
 		});
