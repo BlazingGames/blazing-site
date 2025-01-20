@@ -109,9 +109,10 @@ a
 
 .mcitem
 {
-	display: inline;
-	width: 1em;
-	height: 1em;
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	font-size: 0.5em;
 }
 
 .mcitem > img
@@ -119,6 +120,16 @@ a
 	transform: translate(0, 5px);
 	width: inherit;
 	height: inherit;
+}
+
+.mcitem > .stacksize
+{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transform: translate(0, 5px);
+	background-color: rgba(0,0,0,0.6);
+	font-style: normal;
 }
 
 .recipe .mcitem > img
@@ -131,6 +142,19 @@ a
 	display: block;
 	width: 40px;
 	height: 40px;
+	font-size: 20px;
+}
+
+.enchantmentDetails .extraMaterial
+{
+	padding: 0;
+}
+
+.enchantmentDetails .extraMaterial .mcitem
+{
+	width: 36px;
+	height: 36px;
+	font-size: 18px;
 }
 
 .tooltip 
@@ -310,4 +334,37 @@ p.hidden
 .equation:hover
 {
 	background-color: rgba(0,0,0,0.4);
+}
+
+table, tr, td
+{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+td
+{
+	background-color: rgb(0,0,0,0.1);
+    padding: 5px;
+    text-align: center;
+}
+
+tr.topRow > td
+{
+    background-color: rgb(0,0,0,0.3);
+}
+
+tr.topRow > td
+{
+    min-width: 30px;
+}
+
+td.available
+{
+    background-color: rgba(0,255,0,0.2);
+}
+
+td.notavailable
+{
+    background-color: rgba(255,0,0,0.2);
 }

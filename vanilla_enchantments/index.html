@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>BlazingSite</title>
+  		<link rel="icon" type="image/png" href="../resources/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+		<link rel="stylesheet" href="../style.css" />
+		<script src="../script.js"></script>
+		<script src="../docscript.js"></script>
+		<link rel="stylesheet" href="../docstyle.css" />
+	</head>
+	<body>
+		<div id="siteheader">BlazingSite</div>
+		<div id="navbar"></div>
+		<div id="content">
+			<div id="title">
+				Changes to the Vanilla Enchantments
+			</div>
+			<div id="description">
+				<div class="docdesc">
+					With the rework of the enchanting system, many enchantments received recipes that need to be documented.
+					Also some enchantments may have been tweaked. This page is gonna document them all.
+				</div>
+				<div class="section">
+					<div class="sectitle">Combat Enchantments</div>
+					<div class="function">
+						<div class="funtitle">Smite</div>
+						<div class="fundesc">5 levels. Available on swords, axes and maces. Incompatible with Sharpness or Bane of Arthropods. 
+							Deals <span class="equation">2.5 * level</span> more damage (<span class="equation">1.25 * level</span> hearts) to undead mobs.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,1,10,rotten_flesh</div>
+								<div class="level">2,2,2,20,rotten_flesh</div>
+								<div class="level">3,3,3,30,rotten_flesh</div>
+								<div class="level">4,4,4,40,rotten_flesh</div>
+								<div class="level">4,5,5,50,rotten_flesh</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="sectitle">Gathering Enchantments</div>
+					<div class="function">
+						<div class="funtitle">Fortune</div>
+						<div class="fundesc">3 levels. Available on tools. Incompatible with Silk Touch. Increases drops from gathering.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,2,16,emerald</div>
+								<div class="level">3,2,4,16,diamond</div>
+								<div class="level">4,3,8,1,rabbit_foot</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Lure</div>
+						<div class="fundesc">3 levels. Available on fishing rods. Decreases the bite wait time by <span>5 * level</span> seconds.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,1,16,string</div>
+								<div class="level">2,2,2,16,cod</div>
+								<div class="level">3,3,4,16,pufferfish</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Silk Touch</div>
+						<div class="fundesc">2 levels. Available on tools. Incompatible with Fortune. Drops mined blocks as is. More information on the dedicated page for <a href="../silk_touch_plus">Silk Touch+</a>.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">3,1,15,32,string</div>
+								<div class="level">5,2,30,1,netherite_ingot</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="sectitle">Ranged Enchantments</div>
+					<div class="function">
+						<div class="funtitle">Infinity</div>
+						<div class="fundesc">Available on bows. Incompatible with Mending. Regular arrows shot by this arrow don't get removed.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">4,1,8,64,arrow</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Loyalty</div>
+						<div class="fundesc">3 levels. Available on tridents. Incompatible with Riptide. 
+							After the trident hits something, it returns with a speed of <span class="equation">level * 10</span> blocks per second.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,2,16,bone</div>
+								<div class="level">3,2,3,16,cod</div>
+								<div class="level">4,3,4,16,chain</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Piercing</div>
+						<div class="fundesc">4 levels. Available on crossbows. Incompatible with Multishot. Shot arrows can pierce up to <span class="equation">level</span> entities.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,2,32,rotten_flesh</div>
+								<div class="level">2,2,4,32,bone</div>
+								<div class="level">3,3,6,32,spider_eye</div>
+								<div class="level">4,4,8,32,gunpowder</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Punch</div>
+						<div class="fundesc">2 levels. Available on bows. Adds <span class="equation">level * 3</span> blocks to the base knocback.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,2,10,slime_block</div>
+								<div class="level">3,2,4,10,piston</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Quick Charge</div>
+						<div class="fundesc">3 levels. Available on crossbows. Decreases crossbow charge time by <span class="equation">level * 0.25</span> seconds.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,4,16,leather</div>
+								<div class="level">3,2,6,16,string</div>
+								<div class="level">4,3,8,1,potion_of_swiftness</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="sectitle">Armor Enchantments</div>
+					<div class="function">
+						<div class="funtitle">Curse of Binding</div>
+						<div class="fundesc">Available on all armor. Prevents unequipping of the armor piece once equipped. Cursed Enchantment.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,8,16,cobweb</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Respiration</div>
+						<div class="fundesc">3 levels. Available on helmets. Increases air time by <span class="equation">level * 15</span> seconds.
+							It also grants a <span class="equation">100 * level / (level + 1)</span>% chance not to take drowning damage.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,1,1,water_bucket</div>
+								<div class="level">2,2,2,1,turtle_helmet</div>
+								<div class="level">4,3,4,1,potion_of_water_breathing</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Swift Sneak</div>
+						<div class="fundesc">3 levels. Available on leggings. Increases the player's crouching speed by <span class="equation">level * 15</span>% of their walking speed. 
+							<a href="../tomes">Requires an <i class="mcitem echo_tome"></i></a>.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,1,16,any_wool</div>
+								<div class="level">3,2,2,16,sculk</div>
+								<div class="level">4,3,4,4,echo_shard</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Frost Walker</div>
+						<div class="fundesc">2 levels. Available on boots. Incompatible with Depth Strider. While moving on ground, freezes any exposed water source blocks around a <span class="equation">2 + level</span> block radius. 
+							<a href="../tomes">Requires an <i class="mcitem chill_tome"></i></a>.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,2,16,blue_ice</div>
+								<div class="level">3,2,4,16,prismarine_crystals</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="sectitle">Miscellaneous Enchantments</div>
+					<div class="function">
+						<div class="funtitle">Unbreaking</div>
+						<div class="fundesc">3 levels. Available on every breakable item. Gives a <span class="equation">level * 100 / (level + 1)</span>% chance to ignore each durability point lost.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,2,32,iron_ingot</div>
+								<div class="level">3,2,4,32,obsidian</div>
+								<div class="level">4,3,8,2,netherite_scrap</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
