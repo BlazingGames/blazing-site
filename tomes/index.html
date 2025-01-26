@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>BlazingSite</title>
+  		<link rel="icon" type="image/png" href="../resources/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../style.css" />
+		<script src="../script.js"></script>
+		<script src="../pagescript.js"></script>
+		<link rel="stylesheet" href="../itemstyle.css" />
+	</head>
+	<body onload="loadPages(4)">
+		<div id="siteheader">Tomes</div>
+		<img src="../resources/any_tome.gif" class="repeaticon hidden page1" />
+		<img src="../resources/tome_altar.png" class="repeaticon hidden page2" />
+		<img src="../resources/any_tome.gif" class="repeaticon hidden page3" />
+		<img src="../resources/any_tome.gif" class="repeaticon hidden page4" />
+		<div id="content">
+			<div id="title">
+				<span class="page1 hidden">Tomes</span>
+				<span class="page2 hidden">Tome Altars</span>
+				<span class="page3 hidden">Tome Obtaining</span>
+				<span class="page4 hidden">Tome Obtaining - Part 2</span>
+			</div>
+			<div id="description">
+				<p class="page1 hidden">
+					Tomes allows <a href="../altar_of_enchanting">the Altar of Enchanting</a> to 
+					enchant treasure enchantments onto items.
+				</p>
+				<p class="page1 hidden">
+					Tomes come in different types and each type can be used to unlock one specific enchantment.<br />
+					Each type may be obtainable in a different way.<br />
+					Vanilla tomes generally are contained within the structures that they were spawning in anyway.
+				</p>
+				<p class="page2 hidden">
+					In order for the altar to be able to use the tomes, you need to put these on a <i class="mcitem tome_altar"></i>.<br />
+					Simply place the <i class="mcitem tome_altar"></i> near the altar of enchanting and right click the 
+					<i class="mcitem tome_altar"></i> with a tome.
+				</p>
+				<p class="page3 hidden">
+					Here's a list of all tomes and where you can get them.
+				</p>
+				<ul class="page3 hidden">
+					<li>
+						<i class="mcitem black_tome"></i> Black Tome - found in Pillager Outposts, 
+						contains <a href="../capturing/">Capturing</a>.
+					</li>
+					<li>
+						<i class="mcitem bind_tome"></i> Bind Tome - found in Pillager Outposts
+						and Woodland Mansions, contains <a href="../vanilla_enchantments/">Curse of Binding</a>.
+					</li>
+					<li>
+						<i class="mcitem chill_tome"></i> Chill Tome - found in Igloos, 
+						contains <a href="../vanilla_enchantments/">Frost Walker</a>.
+					</li>
+					<li>
+						<i class="mcitem dim_tome"></i> Dim Tome - Contains <a href="../unshiny/">Unshiny</a>. Found in Bastions. What irony.
+					</li>
+					<li>
+						<i class="mcitem echo_tome"></i> Echo Tome - found in Ancient Cities, 
+						contains <a href="../vanilla_enchantments/">Swift Sneak</a>.
+					</li>
+					<li>
+						<i class="mcitem fuse_tome"></i> Fuse Tome - found in Strongholds 
+						and End Cities, contains <a href="../vanilla_enchantments/">Mending</a>.
+					</li>
+					<li>
+						<i class="mcitem greed_tome"></i> Greed Tome - gotten by trading with Librarians, 
+						contains <a href="../scavenger/">Scavenger</a>.
+					</li>
+					<li>
+						<i class="mcitem gust_tome"></i> Gust Tome - found in End Cities, 
+						contains <a href="../updraft/">Updraft</a>.
+					</li>
+				</ul>
+				<ul class="page4 hidden">
+					<li>
+						<i class="mcitem nether_tome"></i> Nether Tome - gotten by trading with Piglins 
+						and found in Bastions, contains <a href="../vanilla_enchantments/">Soul Speed</a>.
+					</li>
+					<li>
+						<i class="mcitem storm_tome"></i> Storm Tome - gotten as a reward from ominous vaults, 
+						contains <a href="../vanilla_enchantments/">Wind Burst</a>.
+					</li>
+					<li>
+						<i class="mcitem vanish_tome"></i> Vanish Tome - found in Pillager Outposts
+						and Woodland Mansions, contains <a href="../vanilla_enchantments/">Curse of Vanishing</a>.
+					</li>
+				</ul>
+			</div>
+			<div class="recipe page2 hidden">
+				<i class="mcitem"></i>
+				<i class="mcitem item_frame"></i>
+				<i class="mcitem"></i>
+				<i class="mcitem"></i>
+				<i class="mcitem blackstone"></i>
+				<i class="mcitem"></i>
+				<i class="mcitem"></i>
+				<i class="mcitem"></i>
+				<i class="mcitem"></i>
+				<i class="mcitem tome_altar"></i>
+				<span class="shapeless"></span>
+			</div>
+		</div>
+		<div class="clearBoth"></div>
+	</body>
+</html>

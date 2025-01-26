@@ -4,7 +4,7 @@ let itemGIFs = [
 	'pattern_upgrade_1x2', 'pattern_upgrade_2x2', 'pattern_upgrade_3x3', 'experience_bottle', 'enchanting_table',
 	'silk_touch_upgrade', 'flame_upgrade', 'chunkloader_upgrade', 'sweeping_upgrade_tier_1', 'sweeping_upgrade_tier_2', 
 	'sweeping_upgrade_tier_3', 'compass', 'teleport_anchor', 'builder_wand', 'blueprint', 'sculk', 'any_wool', 'any_boat', 
-	'nether_star_chunk', 'any_bed'
+	'nether_star_chunk', 'any_bed', 'magma_block', 'warped_stem'
 ];
 
 let altTranslations = {
@@ -346,6 +346,9 @@ function loadEnchantmentDetails(element)
 	topRow.appendChild(requiredItemD);
 	table.appendChild(topRow);
 
+	let currentEnchantmentLevel = null;
+	let enchantmentLevelElement = null;
+
 	let currentAltarTier = null;
 	let altarTierElement = null;
 
@@ -366,10 +369,22 @@ function loadEnchantmentDetails(element)
 
 		let levelRow = document.createElement("tr");
 
-		let levelEl = document.createElement("td");
-		levelEl.innerHTML = romanize(level);
+		// Enchantment Level
+		let enchLevel = romanize(level);
+		if(enchantmentLevel.length > 5)
+		{
+			enchLevel = enchantmentLevel[5];
+		}
 
-		levelRow.appendChild(levelEl);
+		if(enchLevel != currentEnchantmentLevel) 
+		{
+			enchantmentLevelElement = document.createElement("td");
+			enchantmentLevelElement.rowSpan = 0;
+			enchantmentLevelElement.innerHTML = enchLevel;
+			levelRow.appendChild(enchantmentLevelElement);
+		}
+		currentEnchantmentLevel = enchLevel;
+		enchantmentLevelElement.rowSpan++;
 
 		// Min. Required Altar Tier
 		let tier = enchantmentLevel[0];
