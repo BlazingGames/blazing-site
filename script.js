@@ -3,11 +3,17 @@ let itemGIFs = [
 	'storage_upgrade_tier_1', 'storage_upgrade_tier_2', 'storage_upgrade_tier_3', 'storage_upgrade_tier_4', 'storage_upgrade_tier_5',
 	'pattern_upgrade_1x2', 'pattern_upgrade_2x2', 'pattern_upgrade_3x3', 'experience_bottle', 'enchanting_table',
 	'silk_touch_upgrade', 'flame_upgrade', 'chunkloader_upgrade', 'sweeping_upgrade_tier_1', 'sweeping_upgrade_tier_2', 
-	'sweeping_upgrade_tier_3', 'compass', 'teleport_anchor', 'builder_wand', 'blueprint'
+	'sweeping_upgrade_tier_3', 'compass', 'teleport_anchor', 'builder_wand', 'blueprint', 'sculk', 'any_wool', 'any_boat', 
+	'nether_star_chunk', 'any_bed', 'magma_block', 'warped_stem'
 ];
 
 let altTranslations = {
-	"builder_wand": "Builder's Wand"
+	"builder_wand": "Builder's Wand",
+	"rabbit_foot": "Rabbit's Foot",
+	"cod": "Raw Cod",
+	"salmon": "Raw Salmon",
+	"turtle_helmet": "Turtle Shell",
+	"hay_block": "Hay Bale"
 };
 
 function onLoad() {
@@ -17,7 +23,6 @@ function onLoad() {
 	{
 		element.addEventListener("click", function (event) {
 			let target = event.currentTarget;
-			console.log(target.id);
 			let page = "../" + target.id + "/index.html";
 			if(document.body.classList.contains("homepage"))
 			{
@@ -43,19 +48,19 @@ function onLoad() {
 
 		document.body.appendChild(homeButton);
 
-		document.getElementById("siteheader").innerHTML = "<a href='../index.html'>BlazingSite</a>"
+		document.getElementById("siteheader").innerHTML = "<a href='../index.html'>BlazingSite</a>";
+	}
+
+	const enchantmentDetails = document.querySelectorAll(".enchantmentDetails");
+
+	for (const element of enchantmentDetails) {
+		loadEnchantmentDetails(element);
 	}
 
 	const items = document.querySelectorAll(".mcitem");
 
 	for (const element of items) {
 		loadMcItem(element);
-	}
-
-	const altarAvailability = document.querySelectorAll(".altarAvailability");
-
-	for (const element of altarAvailability) {
-		loadAltarAvailability(element);
 	}
 
 	const shapelessIcons = document.querySelectorAll(".recipe .shapeless");
@@ -94,16 +99,26 @@ function onLoad() {
 function loadMcItem(element)
 {
 	let itemId = null;
+	let stackSize = 1;
 	let overrideTooltip = element.innerHTML;
 
-	console.log(overrideTooltip);
 	element.innerHTML = "";
 
+	let stackSizeRegex = /^stack\d+$/;
+
 	element.classList.forEach(className => {
-		if(className != "mcitem")
+		if(className == "mcitem")
 		{
-			itemId = className;
+			return;
 		}
+
+		if(stackSizeRegex.test(className))
+		{
+			stackSize = parseInt(className.slice(5));
+			return;
+		}
+		
+		itemId = className;
 	});
 
 	if(itemId == null)
@@ -146,9 +161,23 @@ function loadMcItem(element)
 		imageAlt = overrideTooltip;
 	}
 
+	if(stackSize > 1)
+	{
+		imageAlt = stackSize + "x " + imageAlt;
+	}
+
 	let img = document.createElement('img');
 	img.src = "../resources/"+ itemId + (itemGIFs.includes(itemId) ? ".gif" : ".png");
 	img.alt = imageAlt;
+	element.appendChild(img);
+
+	if(stackSize > 1) 
+	{
+		let stackSizeElement = document.createElement('span');
+		stackSizeElement.classList.add("stacksize");
+		stackSizeElement.innerHTML = stackSize + "";
+		element.appendChild(stackSizeElement);
+	}
 
 	let tooltip = document.createElement('span');
 	tooltip.classList.add('tooltiptext');
@@ -166,7 +195,6 @@ function loadMcItem(element)
 		if(right > contentRect.width) tooltip.style.transform = "translate(-50%, 0) translate(" + (contentRect.width-right) + "px, 0)";
 	});
 
-	element.appendChild(img);
 	element.appendChild(tooltip);
 }
 
@@ -203,7 +231,6 @@ function loadGallery(element)
 	element.appendChild(controllers);
 
 	let recipes = element.getElementsByClassName("recipe");
-	console.log(recipes);
 
 	element.getCurrentIndex = () => {
 		let i = 0;
@@ -284,81 +311,144 @@ function romanize (num) {
     return Array(+digits.join("") + 1).join("M") + roman;
 }
 
-function loadAltarAvailability(element)
+function loadEnchantmentDetails(element)
 {
-	let availability = element.innerHTML.split(",");
+	let enchantmentLevels = [];
+
+	for(const child of element.children) 
+	{
+		if(child.classList.contains("level")) 
+		{
+			enchantmentLevels.push(child.innerHTML.split(","));
+		}
+	}
+
 	element.innerHTML = "";
 
 	let table = document.createElement("table");
-	let altarTierRow = document.createElement("tr");
-	altarTierRow.classList.add("altarTier");
-	let altarTierD = document.createElement("td");
-	altarTierD.innerHTML = "<a href='../altar_of_enchanting'>Altar Tier</a>";
-	altarTierRow.appendChild(altarTierD);
-	let maxLevelRow = document.createElement("tr");
-	maxLevelRow.classList.add("maxLevel");
-	let maxLevelD = document.createElement("td");
-	maxLevelD.innerHTML = "Max. Available Level";
-	maxLevelRow.appendChild(maxLevelD);
 
-	let string = null;
-	let amount = 0;
+	let topRow = document.createElement("tr");
+	topRow.classList.add("topRow");
+	let levelD = document.createElement("td");
+	levelD.innerHTML = "Level";
+	topRow.appendChild(levelD);
+	let minAltarTierD = document.createElement("td");
+	minAltarTierD.innerHTML = "<a href='../altar_of_enchanting'>Altar Tier</a>";
+	topRow.appendChild(minAltarTierD); 
+	let expAmountD = document.createElement("td");
+	expAmountD.innerHTML = "Required Levels";
+	topRow.appendChild(expAmountD); 
+	let lapisAmountD = document.createElement("td");
+	lapisAmountD.innerHTML = "Amount of <i class='mcitem lapis_lazuli'></i>";
+	topRow.appendChild(lapisAmountD); 
+	let requiredItemD = document.createElement("td");
+	requiredItemD.innerHTML = "Extra Material";
+	topRow.appendChild(requiredItemD);
+	table.appendChild(topRow);
 
-	let tier = 0;
-	for (const level of availability)
+	let currentEnchantmentLevel = null;
+	let enchantmentLevelElement = null;
+
+	let currentAltarTier = null;
+	let altarTierElement = null;
+
+	let currentExpAmount = null;
+	let currentExpElement = null;
+
+	let currentLapisAmount = null;
+	let currentLapisElement = null;
+
+	let currentItemId = null;
+	let currentStack = null;
+	let itemElement = null;
+
+	let level = 0;
+	for(const enchantmentLevel of enchantmentLevels)
 	{
-		tier++;
-		let current = "";
-		if(isNaN(+level))
-		{
-			current = level;
-		}
-		else if(+level > 0)
-		{
-			current = romanize(+level);
-		}
+		level++;
 
-		if(string == null) string = current;
+		let levelRow = document.createElement("tr");
 
-		if(current == string) 
+		// Enchantment Level
+		let enchLevel = romanize(level);
+		if(enchantmentLevel.length > 5)
 		{
-			amount++;
-		}
-		else 
-		{
-			maxLevelRow.appendChild(getAltarLevelElement(string, amount));
-			string = current;
-			amount = 1;
+			enchLevel = enchantmentLevel[5];
 		}
 
-		let altarTierEl = document.createElement("td");
-		altarTierEl.innerHTML = romanize(tier);
+		if(enchLevel != currentEnchantmentLevel) 
+		{
+			enchantmentLevelElement = document.createElement("td");
+			enchantmentLevelElement.rowSpan = 0;
+			enchantmentLevelElement.innerHTML = enchLevel;
+			levelRow.appendChild(enchantmentLevelElement);
+		}
+		currentEnchantmentLevel = enchLevel;
+		enchantmentLevelElement.rowSpan++;
 
-		altarTierRow.appendChild(altarTierEl);
+		// Min. Required Altar Tier
+		let tier = enchantmentLevel[0];
+		if(!isNaN(+tier) && +tier > 0) 
+		{
+			tier = romanize(+tier);
+		}
+
+		if(tier != currentAltarTier) 
+		{
+			altarTierElement = document.createElement("td");
+			altarTierElement.rowSpan = 0;
+			altarTierElement.innerHTML = tier;
+			levelRow.appendChild(altarTierElement);
+		}
+		currentAltarTier = tier;
+		altarTierElement.rowSpan++;
+
+		// Required Levels
+		let levels = enchantmentLevel[2];
+		if(levels != currentExpAmount) 
+		{
+			currentExpElement = document.createElement("td");
+			currentExpElement.rowSpan = 0;
+			currentExpElement.innerHTML = levels;
+			levelRow.appendChild(currentExpElement);
+		}
+		currentExpAmount = levels;
+		currentExpElement.rowSpan++;
+
+		// Required Lapis Amount
+		let lapis = enchantmentLevel[1];
+		if(lapis != currentLapisAmount) 
+		{
+			currentLapisElement = document.createElement("td");
+			currentLapisElement.rowSpan = 0;
+			currentLapisElement.innerHTML = lapis;
+			levelRow.appendChild(currentLapisElement);
+		}
+		currentLapisAmount = lapis;
+		currentLapisElement.rowSpan++;
+
+		// Required Extra Material
+		let stack = enchantmentLevel[3];
+		let id = enchantmentLevel[4];
+		if(currentItemId != id || currentStack != stack) 
+		{
+			let mcItem = document.createElement("i");
+			mcItem.classList.add("mcitem", id, "stack"+stack)
+
+			itemElement = document.createElement("td");
+			itemElement.classList.add("extraMaterial");
+			itemElement.rowSpan = 0;
+			itemElement.appendChild(mcItem);
+			levelRow.appendChild(itemElement);
+		}
+		currentStack = stack;
+		currentItemId = id;
+		itemElement.rowSpan++;
+
+		table.appendChild(levelRow);
 	}
-	let maxLevelEl = getAltarLevelElement(string, amount);
 
-	if(amount >= availability.length && string == "")
-	{
-		maxLevelEl.innerHTML = "Treasure";
-	}
-
-	maxLevelRow.appendChild(maxLevelEl);
-
-	table.appendChild(altarTierRow);
-	table.appendChild(maxLevelRow);
 	element.appendChild(table);
-}
-
-function getAltarLevelElement(string, amount)
-{
-	let maxLevelEl = document.createElement("td");
-
-	maxLevelEl.classList.add(string == "" ? "notavailable" : "available");
-	maxLevelEl.colSpan = amount;
-	maxLevelEl.innerHTML = string;
-
-	return maxLevelEl;
 }
 
 addEventListener("load", onLoad);

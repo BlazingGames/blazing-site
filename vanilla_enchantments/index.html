@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>BlazingSite</title>
+  		<link rel="icon" type="image/png" href="../resources/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+		<link rel="stylesheet" href="../style.css" />
+		<script src="../script.js"></script>
+		<script src="../docscript.js"></script>
+		<link rel="stylesheet" href="../docstyle.css" />
+	</head>
+	<body>
+		<div id="siteheader">BlazingSite</div>
+		<div id="navbar"></div>
+		<div id="content">
+			<div id="title">
+				Changes to the Vanilla Enchantments
+			</div>
+			<div id="description">
+				<div class="docdesc">
+					With the rework of the enchanting system, many enchantments received recipes that need to be documented.
+					Also some enchantments may have been tweaked. This page is gonna document them all.
+				</div>
+				<div class="section">
+					<div class="sectitle">Combat Enchantments</div>
+					<div class="function">
+						<div class="funtitle">Bane of Arthropods</div>
+						<div class="fundesc">5 levels. Available on swords, axes and maces. Incompatible with Sharpness, Density, Breach, Bane of Arthropods, 
+							<a href="../hell_infusion/">Hell Infusion</a>, <a href="../sea_infusion/">Sea Infusion</a> or <a href="../bane_of_illagers/">Bane of Illagers</a>. 
+							Deals <span class="equation">2.5 * level</span> more damage (<span class="equation">1.25 * level</span> hearts) to arthropods. 
+							Also inflicts Slowness IV on a hit arthropod for a duration ranging from 1 second to <span class="equation">1 + 0.5 * level</span> seconds.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,1,10,spider_eye</div>
+								<div class="level">2,2,2,20,spider_eye</div>
+								<div class="level">3,3,3,30,spider_eye</div>
+								<div class="level">4,4,4,40,spider_eye</div>
+								<div class="level">4,5,5,50,spider_eye</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Breach</div>
+						<div class="fundesc">4 levels. Available on maces. Incompatible with Smite, Density or Bane of Arthropods. 
+							Reduces the effectiveness of armor by <span class="equation">15 * level</span>%.
+							Does not reduce the effectiveness of enchantment protection.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,2,16,grindstone</div>
+								<div class="level">2,2,4,8,anvil</div>
+								<div class="level">3,3,6,1,potion_of_strength</div>
+								<div class="level">4,4,8,1,heavy_core</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Density</div>
+						<div class="fundesc">5 levels. Available on maces. Incompatible with Smite, Breach or Bane of Arthropods. 
+							Deals <span class="equation">0.5 * level</span> more damage (<span class="equation">0.25 * level</span> hearts) per block fallen.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,1,2,anvil</div>
+								<div class="level">2,2,2,4,anvil</div>
+								<div class="level">3,3,3,6,anvil</div>
+								<div class="level">4,4,4,8,anvil</div>
+								<div class="level">4,5,5,1,heavy_core</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Fire Aspect</div>
+						<div class="fundesc">2 levels. Available on swords and maces. 
+							Lights struck mobs on fire for <span class="equation">4 * level</span> seconds.
+						</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,4,16,blaze_powder</div>
+								<div class="level">3,2,8,32,blaze_powder</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Impaling</div>
+						<div class="fundesc">5 levels. Available on tridents. 
+							Deals <span class="equation">2.5 * level</span> more damage (<span class="equation">1.25 * level</span> hearts) to aquatic mobs.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,1,1,water_bucket</div>
+								<div class="level">2,2,2,32,rotten_flesh</div>
+								<div class="level">3,3,3,16,cod</div>
+								<div class="level">4,4,4,16,salmon</div>
+								<div class="level">4,5,5,16,pufferfish</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Sharpness</div>
+						<div class="fundesc">5 levels. Available on swords and axes. Incompatible with Smite, Bane of Arthropods, 
+							<a href="../hell_infusion/">Hell Infusion</a>, <a href="../sea_infusion/">Sea Infusion</a> and <a href="../bane_of_illagers/">Bane of Illagers</a>. 
+							Deals <span class="equation">0.5 * level + 0.5</span> more damage (<span class="equation">0.25 * level + 0.25</span> hearts).</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,2,32,redstone</div>
+								<div class="level">2,2,4,16,redstone_block</div>
+								<div class="level">3,3,6,16,blaze_powder</div>
+								<div class="level">4,4,8,8,diamond</div>
+								<div class="level">4,5,10,1,potion_of_strength</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Smite</div>
+						<div class="fundesc">5 levels. Available on swords, axes and maces. Incompatible with Sharpness, Density, Breach or Bane of Arthropods, 
+							<a href="../hell_infusion/">Hell Infusion</a>, <a href="../sea_infusion/">Sea Infusion</a> and <a href="../bane_of_illagers/">Bane of Illagers</a>. 
+							Deals <span class="equation">2.5 * level</span> more damage (<span class="equation">1.25 * level</span> hearts) to undead mobs.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,1,10,rotten_flesh</div>
+								<div class="level">2,2,2,20,rotten_flesh</div>
+								<div class="level">3,3,3,30,rotten_flesh</div>
+								<div class="level">4,4,4,40,rotten_flesh</div>
+								<div class="level">4,5,5,50,rotten_flesh</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Sweeping Edge</div>
+						<div class="fundesc">3 levels. Available on swords. Increases sweeping attack damage.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,1,32,rotten_flesh</div>
+								<div class="level">2,2,2,32,bone</div>
+								<div class="level">3,3,4,32,string</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Wind Burst</div>
+						<div class="fundesc">3 levels. Available on maces. 
+							Launches the player upwards approximately <span class="equation">8 * level</span> blocks on a successful smash attack.
+							<a href="../tomes">Requires a <i class="mcitem storm_tome"></i></a>.
+						</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,1,16,wind_charge</div>
+								<div class="level">3,2,2,32,breeze_rod</div>
+								<div class="level">4,3,4,1,potion_of_wind_charging</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="sectitle">Gathering Enchantments</div>
+					<div class="function">
+						<div class="funtitle">Efficiency</div>
+						<div class="fundesc">5 levels. Available on tools. 
+							Increases tool speed by <span class="equation">level² + 1</span> when breaking a block that's optimal for this tool.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,2,32,sugar</div>
+								<div class="level">2,2,4,32,redstone</div>
+								<div class="level">3,3,6,16,redstone_block</div>
+								<div class="level">4,4,8,32,gold_ingot</div>
+								<div class="level">4,5,10,1,potion_of_swiftness</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Fortune</div>
+						<div class="fundesc">3 levels. Available on tools. Incompatible with Silk Touch. Increases drops from gathering.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,2,16,emerald</div>
+								<div class="level">3,2,4,16,diamond</div>
+								<div class="level">4,3,8,1,rabbit_foot</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Looting</div>
+						<div class="fundesc">3 levels. Available on swords. Increases mob drops.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,2,16,chest</div>
+								<div class="level">3,2,4,16,emerald</div>
+								<div class="level">4,3,8,10,diamond</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Luck of the Sea</div>
+						<div class="fundesc">3 levels. Available on fishing rods. Increases treasure drop rate.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,1,16,cod</div>
+								<div class="level">2,2,2,8,chest</div>
+								<div class="level">3,3,4,1,heart_of_the_sea</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Lure</div>
+						<div class="fundesc">3 levels. Available on fishing rods. Decreases the bite wait time by <span class="equation">5 * level</span> seconds.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,1,16,string</div>
+								<div class="level">2,2,2,16,cod</div>
+								<div class="level">3,3,4,16,pufferfish</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Silk Touch</div>
+						<div class="fundesc">2 levels. Available on tools. Incompatible with Fortune. Drops mined blocks as is. More information on the dedicated page for <a href="../silk_touch_plus">Silk Touch+</a>.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">3,1,15,32,string</div>
+								<div class="level">5,2,30,1,netherite_ingot</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="sectitle">Ranged Enchantments</div>
+					<div class="function">
+						<div class="funtitle">Channeling</div>
+						<div class="fundesc">Available on tridents. Incompatible with Riptide. Summons a lightning bolt at a mob or lightning rod hit with the trident during a thunderstorm.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">3,1,8,1,lightning_rod</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Flame</div>
+						<div class="fundesc">Available on bows. Sets shot arrows on fire.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,4,16,blaze_powder</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Infinity</div>
+						<div class="fundesc">Available on bows. Incompatible with Mending. Regular arrows shot by this arrow don't get removed.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">4,1,8,64,arrow</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Loyalty</div>
+						<div class="fundesc">3 levels. Available on tridents. Incompatible with Riptide. 
+							After the trident hits something, it returns with a speed of <span class="equation">level * 10</span> blocks per second.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,2,16,bone</div>
+								<div class="level">3,2,3,16,cod</div>
+								<div class="level">4,3,4,16,chain</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Multishot</div>
+						<div class="fundesc">Available on crossbows. Incompatible with Piercing. Shoot 3 arrows for the cost of one.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,4,16,arrow</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Piercing</div>
+						<div class="fundesc">4 levels. Available on crossbows. Incompatible with Multishot. Shot arrows can pierce up to <span class="equation">level</span> entities.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,2,32,rotten_flesh</div>
+								<div class="level">2,2,4,32,bone</div>
+								<div class="level">3,3,6,32,spider_eye</div>
+								<div class="level">4,4,8,32,gunpowder</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Power</div>
+						<div class="fundesc">5 levels. Available on bows. Increases arrow damage by <span class="equation">25 * level</span>%, rounded up to nearest half-heart.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,2,32,redstone</div>
+								<div class="level">2,2,4,16,redstone_block</div>
+								<div class="level">3,3,6,16,blaze_powder</div>
+								<div class="level">4,4,8,8,diamond</div>
+								<div class="level">4,5,10,1,potion_of_strength</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Punch</div>
+						<div class="fundesc">2 levels. Available on bows. Adds <span class="equation">level * 3</span> blocks to the base knocback.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,2,10,slime_block</div>
+								<div class="level">3,2,4,10,piston</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Quick Charge</div>
+						<div class="fundesc">3 levels. Available on crossbows. Decreases crossbow charge time by <span class="equation">level * 0.25</span> seconds.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,4,16,leather</div>
+								<div class="level">3,2,6,16,string</div>
+								<div class="level">4,3,8,1,potion_of_swiftness</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Riptide</div>
+						<div class="fundesc">3 levels. Available on tridents. Incompatible with Loyalty and Channeling. 
+							Makes the trident launch the player but only in water or in rain. 
+							The speed is dependant on the level of the enchantment.
+							You can no longer throw the trident normally.
+						</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">3,1,4,16,chain</div>
+								<div class="level">4,2,6,16,piston</div>
+								<div class="level">4,3,8,16,tnt</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="sectitle">Armor Enchantments</div>
+					<div class="secdesc">Enchantment Protection caps out at 80%.</div>
+					<div class="function">
+						<div class="funtitle">Aqua Affinity</div>
+						<div class="fundesc">Available on helmets. Removes the mining speed penalty from being underwater.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,4,16,prismarine_shard</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Blast Protection</div>
+						<div class="fundesc">4 levels. Available on all armor. Incompatible with Protection, Projectile Protection or Fire Protection. 
+							Increases enchantment protection by <span class="equation">8 * level</span>% against explosions. 
+							Also reduces knockback from explosions by <span class="equation">15 * level</span>%.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,1,32,copper_ingot</div>
+								<div class="level">2,2,2,32,iron_ingot</div>
+								<div class="level">3,3,3,16,tnt</div>
+								<div class="level">4,4,4,32,tnt</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Curse of Binding</div>
+						<div class="fundesc">Available on all armor. Prevents unequipping of the armor piece once equipped. Cursed Enchantment.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,8,16,cobweb</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Depth Strider</div>
+						<div class="fundesc">3 levels. Available on boots. Incompatible with Frost Walker. Reduces the amount that water slows the player down by <span class="equation">level * 33.(3)</span>%.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,1,1,any_boat</div>
+								<div class="level">3,2,2,1,minecart</div>
+								<div class="level">4,3,4,3,rabbit_foot</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Feather Falling</div>
+						<div class="fundesc">4 levels. Available on boots. 
+							Increases enchantment protection by <span class="equation">12 * level</span>% against fall damage and ender pearl damage.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,2,10,feather</div>
+								<div class="level">3,2,4,5,hay_block</div>
+								<div class="level">4,3,6,1,any_bed</div>
+								<div class="level">4,4,8,32,any_wool</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Fire Protection</div>
+						<div class="fundesc">4 levels. Available on all armor. Incompatible with Protection, Projectile Protection or Blast Protection. 
+							Increases enchantment protection by <span class="equation">8 * level</span>% against fire or lava. 
+							Also decreases burn time by <span class="equation">15 * level</span>%.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,1,32,copper_ingot</div>
+								<div class="level">2,2,2,32,iron_ingot</div>
+								<div class="level">3,3,3,16,blaze_powder</div>
+								<div class="level">4,4,4,32,blaze_powder</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Frost Walker</div>
+						<div class="fundesc">2 levels. Available on boots. Incompatible with Depth Strider. While moving on ground, freezes any exposed water source blocks around a <span class="equation">2 + level</span> block radius. 
+							<a href="../tomes">Requires a <i class="mcitem chill_tome"></i></a>.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,2,16,blue_ice</div>
+								<div class="level">3,2,4,16,prismarine_crystals</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Projectile Protection</div>
+						<div class="fundesc">4 levels. Available on all armor. Incompatible with Protection, Blast Protection or Fire Protection. 
+							Increases enchantment protection by <span class="equation">8 * level</span>% against projectiles.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,1,32,copper_ingot</div>
+								<div class="level">2,2,2,32,iron_ingot</div>
+								<div class="level">3,3,3,16,arrow</div>
+								<div class="level">4,4,4,32,arrow</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Protection</div>
+						<div class="fundesc">4 levels. Available on all armor. Incompatible with Fire Protection, Projectile Protection or Blast Protection. 
+							Increases enchantment protection by <span class="equation">4 * level</span>%.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,2,32,copper_ingot</div>
+								<div class="level">2,2,4,32,iron_ingot</div>
+								<div class="level">3,3,6,32,gold_ingot</div>
+								<div class="level">3,4,8,16,diamond</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Respiration</div>
+						<div class="fundesc">3 levels. Available on helmets. Increases air time by <span class="equation">level * 15</span> seconds.
+							It also grants a <span class="equation">100 * level / (level + 1)</span>% chance not to take drowning damage.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">1,1,1,1,water_bucket</div>
+								<div class="level">2,2,2,1,turtle_helmet</div>
+								<div class="level">4,3,4,1,potion_of_water_breathing</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Soul Speed</div>
+						<div class="fundesc">3 levels. Available on boots. Multiplies player's speed on soul sand and soul soil by <span class="equation">130 + 10.5 * level</span>%. 
+							Also cancels out soul sand's speed reduction. Causes the boots to get damaged when walking on soul sand or soul soil. 
+							<a href="../tomes">Requires a <i class="mcitem nether_tome"></i></a>.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,1,16,soul_sand</div>
+								<div class="level">3,2,2,16,soul_soil</div>
+								<div class="level">4,3,4,32,soul_lantern</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Swift Sneak</div>
+						<div class="fundesc">3 levels. Available on leggings. Increases the player's crouching speed by <span class="equation">level * 15</span>% of their walking speed. 
+							<a href="../tomes">Requires an <i class="mcitem echo_tome"></i></a>.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,1,16,any_wool</div>
+								<div class="level">3,2,2,16,sculk</div>
+								<div class="level">4,3,4,4,echo_shard</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Thorns</div>
+						<div class="fundesc">3 levels. Available on all armor. Gives the player a <span class="equation">level * 15</span>% chance of 
+							inflicting damage to their attacker at the cost of 2 durability points.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,1,16,cactus</div>
+								<div class="level">3,2,2,16,sweet_berries</div>
+								<div class="level">4,3,4,1,diamond_sword</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="sectitle">Miscellaneous Enchantments</div>
+					<div class="function">
+						<div class="funtitle">Curse of Vanishing</div>
+						<div class="fundesc">Available on every enchantable item. Items enchanted with this curse will disappear on death. Cursed Enchantment.
+							<a href="../tomes">Requires a <i class="mcitem vanish_tome"></i></a>.
+						</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,8,1,potion_of_invisibility</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Mending</div>
+						<div class="fundesc">Available on every breakable item. Incompatible with Infinity. Picked up experience orbs repair this item.
+							<a href="../tomes">Requires a <i class="mcitem fuse_tome"></i></a>.
+						</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">4,10,15,1,nether_star_chunk</div>
+							</div>
+						</div>
+					</div>
+					<div class="function">
+						<div class="funtitle">Unbreaking</div>
+						<div class="fundesc">3 levels. Available on every breakable item. Gives a <span class="equation">level * 100 / (level + 1)</span>% chance to ignore each durability point lost.</div>
+						<div class="syntax">
+							<div class="enchantmentDetails">
+								<div class="level">2,1,2,32,iron_ingot</div>
+								<div class="level">3,2,4,32,obsidian</div>
+								<div class="level">4,3,8,2,netherite_scrap</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

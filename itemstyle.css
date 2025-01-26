@@ -94,36 +94,3 @@ ul {
 {
 	display: none;
 }
-
-table, tr, td
-{
-	border: 1px solid black;
-	border-collapse: collapse;
-}
-
-td
-{
-	background-color: rgb(0,0,0,0.1);
-    padding: 5px;
-    text-align: center;
-}
-
-tr.altarTier > td
-{
-    background-color: rgb(0,0,0,0.2);
-}
-
-tr.altarTier > td
-{
-    min-width: 30px;
-}
-
-td.available
-{
-    background-color: rgba(0,255,0,0.2);
-}
-
-td.notavailable
-{
-    background-color: rgba(255,0,0,0.2);
-}
