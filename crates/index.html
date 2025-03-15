@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>BlazingSite</title>
+  		<link rel="icon" type="image/png" href="../resources/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../style.css" />
+		<script src="../script.js"></script>
+		<script src="../pagescript.js"></script>
+		<link rel="stylesheet" href="../itemstyle.css" />
+	</head>
+	<body onload="loadPages(2)">
+		<div id="siteheader">BlazingSite</div>
+		<img src="../resources/end_portal_frame.png" class="repeaticon page1 hidden" />
+		<img src="../resources/skeleton_key.png" class="repeaticon page2 hidden" />
+		<div id="content">
+			<div id="title">
+				<span class="page1 hidden">Crates</span>
+				<span class="page2 hidden">Crate Tools</span>
+			</div>
+			<div id="description">
+				<p class="page1 hidden">
+					Tired of 5 minute timers but don't want to turn on keep inventory? Install this generic crate plugin!!!<br />
+					Wait what do you mean the plugin has other features too?
+				</p>
+				<p class="page1 hidden">
+					When you die, a crate spawns located near where you died with all your loot and experience. 
+					You will also receive a <i class="mcitem death_crate_key"></i>. 
+					Each crate can only be opened by it's respective <i class="mcitem death_crate_key"></i>. 
+				</p>
+				<p class="page2 hidden">
+					You can also craft a <i class="mcitem skeleton_key"></i> or a <i class="mcitem to_go_box"></i>.<br />
+					<i class="mcitem skeleton_key"></i> can open any crate, so you can steal your friend's items. It gets consumed on use.<br />
+					<i class="mcitem to_go_box"></i> is the ultimate crate retrieval tool. It puts the contents of the crate into a bundle. 
+					It also gets consumed on use.
+				</p>
+			</div>
+			<div class="recipegallery page2 hidden">
+				<div class="recipe">
+					<i class="mcitem"></i>
+					<i class="mcitem diamond"></i>
+					<i class="mcitem"></i>
+					<i class="mcitem"></i>
+					<i class="mcitem bone"></i>
+					<i class="mcitem"></i>
+					<i class="mcitem"></i>
+					<i class="mcitem bone"></i>
+					<i class="mcitem"></i>
+					<i class="mcitem skeleton_key"></i>
+				</div>
+				<div class="recipe">
+					<i class="mcitem diamond"></i>
+					<i class="mcitem bundle"></i>
+					<i class="mcitem diamond"></i>
+					<i class="mcitem diamond"></i>
+					<i class="mcitem ender_chest"></i>
+					<i class="mcitem diamond"></i>
+					<i class="mcitem"></i>
+					<i class="mcitem diamond"></i>
+					<i class="mcitem"></i>
+					<i class="mcitem to_go_box"></i>
+				</div>
+			</div>
+		</div>
+		<div class="clearBoth"></div>
+	</body>
+</html>

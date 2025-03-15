@@ -7,37 +7,61 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="../style.css" />
 		<script src="../script.js"></script>
+		<script src="../pagescript.js"></script>
 		<link rel="stylesheet" href="../itemstyle.css" />
 	</head>
-	<body>
+	<body onload="loadPages(2)">
 		<div id="siteheader">BlazingSite</div>
-		<img src="../resources/teleport_anchor.gif" id="icon" />
+		<img src="../resources/teleport_anchor.png" id="icon" />
 		<div id="content">
 			<div id="title">
-				Teleport Anchor
+				<span class="page1 hidden">Teleport Anchor</span>
+				<span class="page2 hidden">Teleportation Menu</span>
 			</div>
 			<div id="description">
-				<p>
-					Fast Travel through the world! As long as you have a lodestone there!
+				<p class="page1 hidden">
+					Fast Travel through the world! As long as you have a <i class="mcitem warpstone"></i> there!
 				</p>
-				<p>
+				<p class="page1 hidden">
 					Right Click this item to open up the Teleportation Menu.<br/>
-					Right Click a <i class="mcitem lodestone"></i> with this item to add it to the Teleportation Menu.<br/>
-					Click a saved location in the Teleportation Menu to teleport to the <i class="mcitem lodestone"></i>.<br/>
-					Shift Click a saved location in the Teleportation Menu to remove it from the list.
+					Right Click a <i class="mcitem warpstone"></i> with this item to add it to the Teleportation Menu.<br/>
+				</p>
+				<p class="page1 hidden">
+					You can rename a <i class="mcitem warpstone"></i> with an anvil to set it's default name.
+				</p>
+				<p class="page2 hidden">
+					Click a saved location in the Teleportation Menu to teleport to the <i class="mcitem warpstone"></i>.<br/>
+					Shift Click a saved location in the Teleportation Menu to remove it from the list.<br/>
+					Drop a saved location in the Teleportation Menu that corresponds to a warpstone you placed down 
+					to lock it, so only you can use that warpstone.<br/>
+					Click a saved location with an item in your cursor to set the saved location's icon to the item's icon.
 				</p>
 			</div>
-			<div class="recipe">
-				<i class="mcitem ender_pearl"></i>
-				<i class="mcitem ender_pearl"></i>
-				<i class="mcitem ender_pearl"></i>
-				<i class="mcitem ender_pearl"></i>
-				<i class="mcitem compass"></i>
-				<i class="mcitem ender_pearl"></i>
-				<i class="mcitem ender_pearl"></i>
-				<i class="mcitem ender_pearl"></i>
-				<i class="mcitem ender_pearl"></i>
-				<i class="mcitem teleport_anchor"></i>
+			<div class="recipegallery page1 hidden">
+				<div class="recipe">
+					<i class="mcitem ender_pearl"></i>
+					<i class="mcitem ender_pearl"></i>
+					<i class="mcitem ender_pearl"></i>
+					<i class="mcitem ender_pearl"></i>
+					<i class="mcitem compass"></i>
+					<i class="mcitem ender_pearl"></i>
+					<i class="mcitem ender_pearl"></i>
+					<i class="mcitem ender_pearl"></i>
+					<i class="mcitem ender_pearl"></i>
+					<i class="mcitem teleport_anchor"></i>
+				</div>
+				<div class="recipe">
+					<i class="mcitem popped_chorus_fruit"></i>
+					<i class="mcitem nether_star_chunk"></i>
+					<i class="mcitem popped_chorus_fruit"></i>
+					<i class="mcitem popped_chorus_fruit"></i>
+					<i class="mcitem lodestone"></i>
+					<i class="mcitem popped_chorus_fruit"></i>
+					<i class="mcitem popped_chorus_fruit"></i>
+					<i class="mcitem popped_chorus_fruit"></i>
+					<i class="mcitem popped_chorus_fruit"></i>
+					<i class="mcitem warpstone"></i>
+				</div>
 			</div>
 		</div>
 		<div class="clearBoth"></div>

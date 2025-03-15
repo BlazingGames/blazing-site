@@ -3,17 +3,20 @@ let itemGIFs = [
 	'storage_upgrade_tier_1', 'storage_upgrade_tier_2', 'storage_upgrade_tier_3', 'storage_upgrade_tier_4', 'storage_upgrade_tier_5',
 	'pattern_upgrade_1x2', 'pattern_upgrade_2x2', 'pattern_upgrade_3x3', 'experience_bottle', 'enchanting_table',
 	'silk_touch_upgrade', 'flame_upgrade', 'chunkloader_upgrade', 'sweeping_upgrade_tier_1', 'sweeping_upgrade_tier_2', 
-	'sweeping_upgrade_tier_3', 'compass', 'teleport_anchor', 'builder_wand', 'blueprint', 'sculk', 'any_wool', 'any_boat', 
-	'nether_star_chunk', 'any_bed', 'magma_block', 'warped_stem'
+	'sweeping_upgrade_tier_3', 'compass', 'blazing_builder_wand', 'storm_builder_wand', 'sculk', 'any_wool', 'any_boat', 
+	'nether_star_chunk', 'any_bed', 'magma_block', 'warped_stem', "warpstone"
 ];
 
 let altTranslations = {
-	"builder_wand": "Builder's Wand",
+	"blazing_builder_wand": "Blazing Builder's Wand",
+	"storm_builder_wand": "Storm Builder's Wand",
+	"wooden_builder_wand": "Wooden Builder's Wand",
 	"rabbit_foot": "Rabbit's Foot",
 	"cod": "Raw Cod",
 	"salmon": "Raw Salmon",
 	"turtle_helmet": "Turtle Shell",
-	"hay_block": "Hay Bale"
+	"hay_block": "Hay Bale",
+	"to_go_box": "To-Go Box"
 };
 
 function onLoad() {
