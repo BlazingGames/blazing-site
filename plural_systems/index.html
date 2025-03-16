@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>BlazingSite</title>
+  		<link rel="icon" type="image/png" href="../resources/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../style.css" />
+		<script src="../script.js"></script>
+		<script src="../pagescript.js"></script>
+		<link rel="stylesheet" href="../itemstyle.css" />
+	</head>
+	<body onload="loadPages(4)">
+		<div id="siteheader">BlazingSite</div>
+		<img src="../resources/bundle.png" id="icon" />
+		<div id="content">
+			<div id="title">
+				<span class="page1 hidden">Plural Systems</span>
+				<span class="page2 hidden">Members of Plural Systems</span>
+				<span class="page3 hidden">Proxying of Members of Plural Systems</span>
+				<span class="page4 hidden">Fronting of Proxying of Members<br />of Plural Systems</span>
+			</div>
+			<div id="description">
+				<p class="page1 hidden">
+					Is your mind a single being? If so then get out of this page, 
+					for this is only useful for players with plural systems!<br />
+					(For the record, I am not a cop, I cannot prevent you from reading this page 
+					if you are interested in its material, nor do I have any intention to)
+				</p>
+				<p class="page1 hidden">
+					In order to use this feature, you need to mark your account 
+					as a plural system using <span class="equation">/system enable</span>.<br />
+					You can reverse the decision by using <span class="equation">/system disable</span>.<br />
+					You can then also name your system using <span class="equation">/system name [name]</span> 
+					and set the system's tag using <span class="equation">/system tag [tag]</span>.<br />
+					In order to unset either of these two properties, use 
+					<span class="equation">/system name</span> 
+					and <span class="equation">/system tag</span> respectively.
+				</p>
+				<p class="page2 hidden">
+					A plural system is no good without any members, so don't forget to create some with 
+					<span class="equation">/member &lt;name&gt; create</span>!<br />
+					You can view a list of all members of your plural system by using<br /> 
+					<span class="equation">/member list</span>.
+				</p>
+				<p class="page2 hidden">
+					You can delete already created members with <span class="equation">/member &lt;name&gt; delete</span>,
+					but if you wish to rename the member instead, then you can use 
+					<span class="equation">/member &lt;name&gt; rename &lt;new name&gt;</span>.
+				</p>
+				<p class="page2 hidden">
+					Do you want to modify the member's <a href="../display_tags/">display tags</a>? 
+					Well you can also do that with <span class="equation">/member &lt;name&gt; display</span>
+					with the same syntax as the <span class="equation">/display</span> command.<br />
+				</p>
+				<p class="page3 hidden">
+					In order to actually use the system for its intended purpose, 
+					you need to set some proxy tags on your members.<br />
+					Proxy tags are what you enclose your message in to tell the plugin 
+					which member you want to proxy as.<br />
+					Common proxy tags are <span class="equation">[square brackets]</span>, 
+					<span class="equation">{curly brackets}</span> or <span class="equation">A:letter prefixes</span>.<br />
+					And yes, I stole those examples from <a href="https://pluralkit.me/guide/#proxying">PluralKit</a>, 
+					don't blame me.
+				</p>
+				<p class="page3 hidden">
+					In order to set the proxy tags of a member, you need to use 
+					<span class="equation">/member &lt;name&gt; proxy &lt;tags&gt;</span>.<br />
+					The tags provided need to have <span class="equation">text</span> somewhere,
+					which represents the message you are wrapping in the proxy tags.
+				</p>
+				<p class="page4 hidden">
+					You can also set a front for your system, which will automatically proxy 
+					all your messages which don't trigger another proxy.<br />
+					To do so, type in <span class="equation">/front &lt;name&gt;</span>.
+					You can also do just <span class="equation">/front</span> to clear your front.<br />
+					Mention that your front gets cleared when you leave.
+				</p>
+				<p class="page4 hidden">
+					Also, you cannot use a proxy while using the Discord channel.<br />
+					And any unproxied messages don't contain any evidence of you being a plural system.
+				</p>
+			</div>
+		</div>
+		<div class="clearBoth"></div>
+	</body>
+</html>

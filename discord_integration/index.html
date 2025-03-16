@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>BlazingSite</title>
+  		<link rel="icon" type="image/png" href="../resources/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../style.css" />
+		<script src="../script.js"></script>
+		<script src="../pagescript.js"></script>
+		<link rel="stylesheet" href="../itemstyle.css" />
+	</head>
+	<body onload="loadPages(3)">
+		<div id="siteheader">BlazingSite</div>
+		<img src="../resources/lead.png" id="icon" />
+		<div id="content">
+			<div id="title">
+				<span class="page1 hidden">Discord Integration</span>
+				<span class="page2 hidden">Discord Whitelist</span>
+				<span class="page3 hidden">Discord Whitelist</span>
+			</div>
+			<div id="description">
+				<p class="page1 hidden">
+					You know how Minecraft servers sometimes have corresponding Discord servers? Yeah...
+				</p>
+				<p class="page1 hidden">
+					When enabled, the plugin will also act as a bot for the Discord server.
+					The bot will synchronize the messages in a Discord channel with the Minecraft server's chat.
+				</p>
+				<p class="page2 hidden">
+					The server may also decide to enforce a whitelist managed by the Discord server,
+					 in which case, you will need to link your Discord account with your Minecraft username.<br />
+					In order to do so, join both the Discord server and Minecraft server and use the Discord command 
+					<span class="equation">/whitelist &lt;link code&gt;</span> with the link code provided by the Minecraft server.
+				</p>
+				<p class="page2 hidden">
+					You may link multiple Minecraft accounts to one Discord account but not vice versa.<br />
+					You may unlink a Minecraft account from a Discord account by either using the Discord command
+					 <span class="equation">/unlink &lt;Minecraft username&gt;</span>
+					 or the Minecraft command <span class="equation">/unlink</span>.<br />
+					You may view a list of all linked accounts using the Discord command <span class="equation">/links</span>.
+				</p>
+				<p class="page3 hidden">
+					If the server uses a Discord-managed whitelist, 
+					all messages sent from the Discord channel synchronized to the Minecraft server's chat, 
+					will be sent as that Discord account's primary Minecraft account.<br />
+					In order to change which Minecraft account is your primary account, use the Discord command 
+					<span class="equation">/setprimary &lt;Minecraft username&gt;</span>.
+				</p>
+				<p class="page3 hidden">
+					You can also use <span class="equation">/sync</span> to update the data the server knows about you, 
+					since it's not omniscient.
+				</p>
+			</div>
+		</div>
+		<div class="clearBoth"></div>
+	</body>
+</html>

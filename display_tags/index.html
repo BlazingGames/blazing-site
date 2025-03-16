@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>BlazingSite</title>
+  		<link rel="icon" type="image/png" href="../resources/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../style.css" />
+		<script src="../script.js"></script>
+		<script src="../pagescript.js"></script>
+		<link rel="stylesheet" href="../itemstyle.css" />
+	</head>
+	<body onload="loadPages(2)">
+		<div id="siteheader">BlazingSite</div>
+		<img src="../resources/name_tag.png" id="icon" />
+		<div id="content">
+			<div id="title">
+				Display Tags
+			</div>
+			<div id="description">
+				<p class="page1 hidden">
+					Not sure why Minecraft: Java Edition doesn't already have display names,
+					like everything else does. (even Reddit lmao)
+				</p>
+				<p class="page1 hidden">
+					You can view and modify your display tag using <span class="equation">/display</span>.
+					It cannot be used while you have a <a href="../pluralkit/">front</a> set.<br />
+					If your account is a <a href="../pluralkit/">plural system</a>, you can view and modify your members' display tags using 
+					<span class="equation">/member &lt;name&gt; display</span> with the same syntax as <span class="equation">/display</span>.
+				</p>
+				<p class="page2 hidden">
+					A display tag is comprised of 4 parts:
+				</p>
+				<ul class="page2 hidden">
+					<li>
+						a display name, which can be modified with <span class="equation">/display name [name]</span>. 
+						A display name CAN contain <a href="../emojis/">emojis</a>.
+					</li>
+					<li>
+						pronouns, which can be modified with <span class="equation">/display pronouns [pronouns]</span>.  
+					</li>
+					<li>
+						a display color, which can be modified with <span class="equation">/display color [hex code]</span>. 
+						The hex code does not contain the #.
+					</li>
+					<li>
+						the server operator badge, which exists only for server operators, duh.
+					</li>
+				</ul>
+				<p class="page2 hidden">
+					You can unset any of the modifiable properties by passing in nothing
+					 or you can reset all properties of a display tag by doing
+					 <span class="equation">/display reset</span>.<br />
+					You can also view what your display tag looks like with just 
+					<span class="equation">/display</span>.
+				</p>
+			</div>
+		</div>
+		<div class="clearBoth"></div>
+	</body>
+</html>

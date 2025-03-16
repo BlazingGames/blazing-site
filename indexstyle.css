@@ -9,8 +9,8 @@ ul li {
 .sectionbutton {
 	position: relative;
 	display: inline-block;
-	width: 250px;
-	height: 250px;
+	width: 225px;
+	height: 225px;
 	background-color: rgb(117, 117, 117);
 	border-color: rgb(58, 58, 58);
 	border-style: solid;
