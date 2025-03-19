@@ -10,7 +10,7 @@
 		<script src="../pagescript.js"></script>
 		<link rel="stylesheet" href="../itemstyle.css" />
 	</head>
-	<body onload="loadPages(4)">
+	<body onload="loadPages(5)">
 		<div id="siteheader">BlazingSite</div>
 		<img src="../resources/bundle.png" id="icon" />
 		<div id="content">
@@ -19,6 +19,7 @@
 				<span class="page2 hidden">Members of Plural Systems</span>
 				<span class="page3 hidden">Proxying of Members of Plural Systems</span>
 				<span class="page4 hidden">Fronting of Proxying of Members<br />of Plural Systems</span>
+				<span class="page5 hidden">Skinning of Fronting of Proxying<br />of Members of Plural Systems</span>
 			</div>
 			<div id="description">
 				<p class="page1 hidden">
@@ -65,9 +66,10 @@
 				</p>
 				<p class="page3 hidden">
 					In order to set the proxy tags of a member, you need to use 
-					<span class="equation">/member &lt;name&gt; proxy &lt;tags&gt;</span>.<br />
+					<span class="equation">/member &lt;name&gt; proxy [tags]</span>.<br />
 					The tags provided need to have <span class="equation">text</span> somewhere,
-					which represents the message you are wrapping in the proxy tags.
+					which represents the message you are wrapping in the proxy tags.<br />
+					You can leave out the tags parameter to clear the proxy tags of a member.
 				</p>
 				<p class="page4 hidden">
 					You can also set a front for your system, which will automatically proxy 
@@ -79,6 +81,17 @@
 				<p class="page4 hidden">
 					Also, you cannot use a proxy while using the Discord channel.<br />
 					And any unproxied messages don't contain any evidence of you being a plural system.
+				</p>
+				<p class="page5 hidden">
+					You can optionally set a skin for a member of your plural system.<br />
+					To do that, you do <span class="equation">/member &lt;name&gt; skin [mineskin id]</span>.<br />
+					The command requires a <a href="https://mineskin.org">Mineskin ID or URL</a>.<br />
+					You can remove a member's skin by just doing <span class="equation">/member &lt;name&gt; skin</span>.
+				</p>
+				<p class="page5 hidden">
+					A member's skin will replace your own while they are set as your front. 
+					It will also appear in the <a href="../discord_integration/">linked Discord channel</a> 
+					when sending messages, but not when obtaining advancements, joining, quitting or dying.
 				</p>
 			</div>
 		</div>
